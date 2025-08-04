@@ -1,0 +1,80 @@
+---
+layout: default
+title: Photos
+description: Chalet La Koala and Courchevel resort photos
+---
+
+<section class="section">
+    <div class="container">
+        <h1>Photos</h1>
+        <p class="lead">The chalet, the resort, and why we keep coming back</p>
+        
+        <h2>Chalet La Koala</h2>
+        <div class="photo-grid">
+            <img src="{{ '/assets/images/chalet/20ea30cc-3f78-4e6b-99bf-dda209494f3f.jpg' | relative_url }}" alt="Chalet exterior" class="gallery-img">
+            <img src="{{ '/assets/images/chalet/3a6380cb-2c30-4f56-a34b-11fdbc6b30b9.jpg' | relative_url }}" alt="Chalet interior" class="gallery-img">
+            <img src="{{ '/assets/images/chalet/7f3af9b2-10af-4b74-812e-a38c90d373d6.jpg.avif' | relative_url }}" alt="Hot tub" class="gallery-img">
+            <!-- Note: AVIF images may not display in all browsers -->
+        </div>
+        
+        <h2>The Resort</h2>
+        <div class="photo-grid">
+            <!-- Add your Courchevel photos here -->
+            <div class="photo-placeholder">
+                <p>Courchevel photos coming soon!</p>
+                <p class="small">Looking for: Luxury shopping areas, mountain views, snowy slopes</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.photo-placeholder {
+    grid-column: 1 / -1;
+    background: var(--mist);
+    padding: var(--space-xl);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.small {
+    font-size: 0.875rem;
+    color: var(--glacier);
+}
+
+h2 {
+    margin-top: var(--space-xl);
+    color: var(--sky);
+}
+
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-img {
+        height: 200px;
+    }
+}
+</style>
