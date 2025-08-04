@@ -168,8 +168,10 @@ description: Build your personalised trip budget with real-time calculations
                         <select id="lesson-type" onchange="updateCosts()">
                             <option value="0">No lessons</option>
                             <option value="280">Group lessons - 6 days (€320 ≈ £280)</option>
-                            <option value="350">2 x half-day private (€400 ≈ £350)</option>
-                            <option value="525">3 x half-day private (€600 ≈ £525)</option>
+                            <option value="117">Share 2 x half-day private (3 people) (£117pp)</option>
+                            <option value="175">Share 3 x half-day private (3 people) (£175pp)</option>
+                            <option value="350">2 x half-day private solo (£350)</option>
+                            <option value="525">3 x half-day private solo (£525)</option>
                         </select>
                     </div>
                 </div>
@@ -178,7 +180,7 @@ description: Build your personalised trip budget with real-time calculations
             <!-- Food & Drink -->
             <div class="cost-section">
                 <h2>Food & Drink Estimates</h2>
-                <p class="section-note">Typical week: Cook 2 nights, fondue/raclette night, eat out 3 nights</p>
+                <p class="section-note">Without chef: Cook 2-3 nights, eat out 3-4 nights. With chef: Dinners covered!</p>
                 
                 <div class="cost-item">
                     <label>
@@ -203,7 +205,7 @@ description: Build your personalised trip budget with real-time calculations
                 <div class="cost-item">
                     <label>
                         <input type="checkbox" id="chef" onchange="updateCosts()">
-                        <span>👨‍🍳 Private Chef (2 evenings)</span>
+                        <span>👨‍🍳 Private Chef (Full Week)</span>
                     </label>
                     <div class="cost-details">
                         <select id="chef-option" onchange="updateCosts()">
@@ -212,6 +214,21 @@ description: Build your personalised trip budget with real-time calculations
                             <option value="420">Premium chef with butler (£420)</option>
                         </select>
                         <div class="sub-note">Full week service, 3-course dinners</div>
+                    </div>
+                </div>
+                
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="groceries" checked onchange="updateCosts()">
+                        <span>🛒 Grocery Shopping</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="grocery-budget" onchange="updateCosts()">
+                            <option value="50">Basic groceries (£50)</option>
+                            <option value="80" selected>Normal groceries (£80)</option>
+                            <option value="120">Premium groceries (£120)</option>
+                        </select>
+                        <div class="sub-note">For breakfasts & snacks (or all meals if no chef)</div>
                     </div>
                 </div>
             </div>
@@ -479,6 +496,7 @@ const costs = {
     },
     food: () => document.getElementById('food').checked ? parseInt(document.getElementById('food-budget').value) : 0,
     chef: () => document.getElementById('chef').checked ? parseInt(document.getElementById('chef-option').value) : 0,
+    groceries: () => document.getElementById('groceries').checked ? parseInt(document.getElementById('grocery-budget').value) : 0,
     insurance: () => document.getElementById('insurance').checked ? 60 : 0,
     extras: () => document.getElementById('extras').checked ? 100 : 0
 };
@@ -497,9 +515,11 @@ const presets = {
         boots: true,
         helmet: true,
         lessons: true,
-        lessonType: '280',
+        lessonType: '117',  // Shared private lessons
         food: true,
         foodBudget: '235',
+        groceries: true,
+        groceryBudget: '80',
         insurance: true
     },
     intermediate: {
@@ -516,6 +536,8 @@ const presets = {
         lessonType: '0',
         food: true,
         foodBudget: '235',
+        groceries: true,
+        groceryBudget: '80',
         insurance: true
     },
     pro: {
@@ -531,12 +553,14 @@ const presets = {
         lessonType: '0',
         food: true,
         foodBudget: '280',
+        groceries: true,
+        groceryBudget: '120',
         insurance: true,
         extras: true
     },
     budget: {
         flights: true,
-        flightType: '235',
+        flightType: '150',
         holdLuggage: false,
         transfers: true,
         skipass: true,
@@ -549,6 +573,8 @@ const presets = {
         lessonType: '0',
         food: true,
         foodBudget: '190',
+        groceries: true,
+        groceryBudget: '50',
         insurance: true
     }
 };

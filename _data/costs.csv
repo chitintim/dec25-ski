@@ -21,11 +21,16 @@ Equipment,Premium Ski Package,180,220,GBP,High-end equipment,false
 Equipment,Ski Boots Only,45,45,GBP,If you have own skis,false
 Equipment,Helmet Rental,27,30,GBP,Safety first,false
 Lessons,Group Lessons 6 days,280,320,GBP,Morning group lessons,false
-Lessons,Private Half Day x2,350,400,GBP,Two half-day sessions,false
-Lessons,Private Half Day x3,525,600,GBP,Three half-day sessions,false
+Lessons,Shared Private x2 (3 people),117,117,GBP,Split cost between 3 beginners,false
+Lessons,Shared Private x3 (3 people),175,175,GBP,Split cost between 3 beginners,false
+Lessons,Private Half Day x2 Solo,350,400,GBP,Two half-day sessions solo,false
+Lessons,Private Half Day x3 Solo,525,600,GBP,Three half-day sessions solo,false
 Food,Budget Daily Food,30,35,GBP,Per day estimate,true
 Food,Normal Daily Food,40,45,GBP,Per day estimate,true
 Food,Foodie Daily Food,50,60,GBP,Per day estimate,true
 Chef,Private Chef Full Week,340,420,GBP,6 nights of 3-course dinners per person,false
+Groceries,Basic Shopping,50,50,GBP,Breakfasts and snacks,true
+Groceries,Normal Shopping,80,80,GBP,Breakfasts snacks and some meals,true
+Groceries,Premium Shopping,120,120,GBP,Quality ingredients all week,true
 Insurance,Winter Sports Cover,40,80,GBP,Essential coverage,false
 Extras,Apres Ski Budget,100,150,GBP,Drinks and activities,true
