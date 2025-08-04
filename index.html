@@ -37,19 +37,23 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center">The Experience</h2>
+        <div class="intro-message">
+            <p>Hey guys! As promised, it's that time of year again (rather early this year!) to plan Tim's ski trip(s). As usual, we're planning to go to Courchevel for the December trip, and I've actually already secured a chalet this year! Using this site to help organise everything and keep you all updated.</p>
+        </div>
+        
+        <h2 class="text-center">What I've Booked</h2>
         <div class="features-grid">
             <div class="card fade-in">
-                <h3>🏔️ Perfect Location</h3>
-                <p>Chalet La Koala in La Tania - gateway to the massive 3 Valleys ski area with 600km of pistes</p>
+                <h3>🏔️ The Location</h3>
+                <p>Chalet La Koala in La Tania - same resort as always, gateway to the 3 Valleys with 600km of skiing</p>
             </div>
             <div class="card fade-in">
-                <h3>🏠 Luxury Chalet</h3>
-                <p>6 bedrooms for 12 people, private hot tub & sauna, close to the slopes</p>
+                <h3>🏠 The Chalet</h3>
+                <p>6 bedrooms (up to 12 people), private hot tub & sauna, walking distance to slopes</p>
             </div>
             <div class="card fade-in">
-                <h3>👥 Great Group</h3>
-                <p>Mix of experienced skiers and beginners - everyone welcome!</p>
+                <h3>👥 The Dates</h3>
+                <p>21st-28th December - full week as always. Spaces going fast!</p>
             </div>
         </div>
     </div>
@@ -57,47 +61,45 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center">Why Courchevel... Again?</h2>
-        <p class="lead text-center">Look, Tim's basically lived here for 20+ weeks over the past 4 years. He's obsessed. Here's why...</p>
+        <h2 class="text-center">Why Courchevel Again?</h2>
+        <p class="lead text-center">Look, you know me - I love this place. Here's the quick version for newcomers:</p>
         
         <div class="value-grid">
             <div class="value-card">
-                <h3>🌍 It's Stupidly Big</h3>
-                <p>600km of slopes. That's like skiing from London to Edinburgh. You literally can't ski it all in a week. Tim's still finding new runs after all these years (or so he claims).</p>
+                <h3>🌍 The 3 Valleys</h3>
+                <p>600km of connected slopes across Courchevel, Méribel, and Val Thorens. It's the world's largest ski area - genuinely something different every day, whether you're a beginner or expert.</p>
             </div>
             
             <div class="value-card">
-                <h3>🎯 Tim Knows Everyone</h3>
-                <p>The lift operators wave. Restaurant owners save tables. Ski rental guys have his boots ready. After 20+ weeks here, he's basically a local who happens to live in the UK.</p>
+                <h3>🎯 Local Knowledge</h3>
+                <p>After many trips here, Tim knows the best runs, quieter times, good lunch spots, and reliable ski hire places. It helps having someone who's learned from past mistakes!</p>
             </div>
             
             <div class="value-card">
-                <h3>✨ It's Not Just Skiing</h3>
-                <p>3pm hot tub sessions with mountain views. That restaurant where they know to bring extra bread. The tree run that's always got fresh powder. These little moments make the trip.</p>
+                <h3>✨ The Chalet Life</h3>
+                <p>Private hot tub after skiing, proper kitchen for group meals, everyone under one roof. It's more social than hotels and creates a better atmosphere for the week.</p>
             </div>
             
             <div class="value-card">
-                <h3>🚀 Zero Faff Guarantee</h3>
-                <p>Tim's done this so many times he could organise it in his sleep. No "where's the meeting point?" or "which lift pass do we need?" - just rock up and ski.</p>
+                <h3>🚀 Sorted Logistics</h3>
+                <p>Coordinated flights, shared transfers, group ski passes - the admin side is handled. You just need to book your flight and show up.</p>
             </div>
         </div>
         
         <div class="testimonial-box">
-            <p class="testimonial">"My mate went to Bulgaria for £500. I spent triple that with Tim. Guess who's still talking about their trip? 
-            <br><br>
-            Spoiler: It's me. Bulgaria mate just complains about the food poisoning."</p>
-            <p class="testimonial-author">- Someone who gets it</p>
+            <p class="testimonial">"Been three times now. Yes it costs more than Andorra but the skiing is incredible, the chalet's amazing, and Tim's got the whole thing running like clockwork. Plus the hot tub makes everything better."</p>
+            <p class="testimonial-author">- Someone from last year</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container text-center">
-        <h2>Ready to Join?</h2>
-        <p class="lead">Limited spaces available - secure your spot soon!</p>
+        <h2>Want In?</h2>
+        <p class="lead">Drop me a message - we've got about 10 spots and they usually go pretty quick</p>
         <div class="cta-buttons">
-            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">Get in Touch</a>
-            <a href="{{ '/faqs' | relative_url }}" class="btn btn-ghost">Read FAQs</a>
+            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">Message Tim</a>
+            <a href="{{ '/faqs' | relative_url }}" class="btn btn-ghost">Questions?</a>
         </div>
     </div>
 </section>
@@ -183,5 +185,20 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
     .value-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.intro-message {
+    background: var(--powder);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    margin-bottom: var(--space-xl);
+    border-left: 4px solid var(--sky);
+}
+
+.intro-message p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--midnight);
+    margin: 0;
 }
 </style>
