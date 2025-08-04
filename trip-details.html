@@ -127,10 +127,23 @@ description: Everything you need to know about the chalet and resort
                         <span class="stat-label">Intermediate</span>
                     </div>
                 </div>
-                <div class="map-link">
-                    <a href="{{ '/assets/files/3-valleys-piste-map.pdf' | relative_url }}" target="_blank" class="btn btn-ghost">
-                        📍 Download 3 Valleys Piste Map (PDF)
-                    </a>
+                <div class="map-section">
+                    <h4>Interactive Piste Map</h4>
+                    <div class="pdf-embed">
+                        <iframe src="{{ '/assets/files/3-valleys-piste-map.pdf' | relative_url }}" 
+                                width="100%" 
+                                height="600" 
+                                style="border: 1px solid #ddd; border-radius: 8px;">
+                            <p>Your browser doesn't support embedded PDFs. 
+                               <a href="{{ '/assets/files/3-valleys-piste-map.pdf' | relative_url }}" target="_blank">Download the piste map here</a>
+                            </p>
+                        </iframe>
+                    </div>
+                    <div class="map-link">
+                        <a href="{{ '/assets/files/3-valleys-piste-map.pdf' | relative_url }}" target="_blank" class="btn btn-ghost">
+                            📍 Download Full Size Map (PDF)
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -339,6 +352,21 @@ description: Everything you need to know about the chalet and resort
     .insider-grid {
         grid-template-columns: 1fr;
     }
+    
+    .pdf-embed iframe {
+        height: 400px;
+    }
+}
+
+.map-section {
+    margin-top: var(--space-lg);
+}
+
+.pdf-embed {
+    margin: var(--space-md) 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .map-link {
