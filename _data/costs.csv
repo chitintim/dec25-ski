@@ -9,7 +9,8 @@ Flights,Hong Kong Return,840,840,GBP,Indicative price - to be confirmed,true
 Flights,Shanghai Return,560,560,GBP,Indicative price - to be confirmed,true
 Flights,Kuala Lumpur Return,630,630,GBP,Indicative price - to be confirmed,true
 Transfers,Geneva Airport Shared,30,81,GBP,Ben's Bus or similar,false
-Transfers,Geneva Airport Private,100,150,GBP,Private transfer for group,true
+Transfers,Group of 8 Private,80,80,GBP,€735 total ÷ 8 people - BOOKED,false
+Transfers,Smaller Group Private,100,125,GBP,If fewer than 8 people,true
 Ski Pass,3 Valleys 6 days,350,385,GBP,Full area access,false
 Ski Pass,Courchevel Only 6 days,280,315,GBP,Limited to Courchevel valley,false
 Ski Pass,Beginner Area 6 days,150,170,GBP,Green runs only,false

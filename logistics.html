@@ -35,14 +35,24 @@ description: Travel logistics and transfer information
             
             <div class="card">
                 <h2>🚌 Transfers</h2>
-                <h3>Shared Transfer Service</h3>
-                <p>We'll arrange shared transfers to match flight times</p>
+                <h3>Private Group Transfer (8 people)</h3>
+                <p><strong>Already booked!</strong> Private vehicle for our group</p>
                 <ul>
                     <li>Geneva Airport → La Tania: ~2.5 hours</li>
-                    <li>Cost: £XX-£XX per person return</li>
-                    <li>Meeting point: Arrivals hall</li>
+                    <li>Cost: <strong>€735 total ÷ 8 = ~£80 per person</strong></li>
+                    <li>Includes all luggage and ski equipment</li>
+                    <li>Outbound: 21st Dec @ 17:00 from Geneva</li>
+                    <li>Return: 28th Dec @ 14:00 from La Tania</li>
                 </ul>
-                <p>Details to be confirmed once flight bookings are finalised</p>
+                <p class="note">If we get more than 8 people, cost per person reduces further!</p>
+                
+                <div class="transfer-info">
+                    <h4>Alternative Options</h4>
+                    <ul>
+                        <li><strong>Ben's Bus:</strong> £30-81 per person (shared service)</li>
+                        <li><strong>Join us later:</strong> Arrange your own transfer if flying different times</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="card">
@@ -129,5 +139,17 @@ description: Travel logistics and transfer information
 .card h4 {
     font-size: 1rem;
     margin-bottom: var(--space-xs);
+}
+
+.transfer-info {
+    background: var(--mist);
+    padding: var(--space-sm);
+    border-radius: 8px;
+    margin-top: var(--space-sm);
+}
+
+.transfer-info h4 {
+    color: var(--glacier);
+    font-size: 0.9rem;
 }
 </style>
