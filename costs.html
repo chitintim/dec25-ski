@@ -10,7 +10,8 @@ description: Build your personalised trip budget with real-time calculations
         <p class="lead">Build your personalised budget • All prices are estimates to be confirmed</p>
         
         <div class="preset-callout">
-            <p>👇 <strong>Start here!</strong> Choose a preset that matches your experience level:</p>
+            <h2>👇 Start by clicking one of these presets:</h2>
+            <p>Select your skiing experience level below and we'll fill in typical costs for you</p>
         </div>
         
         <div class="important-note">
@@ -276,15 +277,24 @@ description: Build your personalised trip budget with real-time calculations
 <style>
 .preset-callout {
     text-align: center;
-    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+}
+
+.preset-callout h2 {
     color: var(--sky);
-    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
     animation: pulse 2s ease-in-out infinite;
+}
+
+.preset-callout p {
+    color: var(--glacier);
+    font-size: 1rem;
 }
 
 @keyframes pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+    50% { opacity: 0.7; }
 }
 
 .preset-buttons {
@@ -431,29 +441,41 @@ description: Build your personalised trip budget with real-time calculations
 .total-display {
     background: var(--midnight);
     color: white;
-    padding: var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
     border-radius: 8px;
     text-align: center;
     position: sticky;
-    bottom: var(--space-md);
+    bottom: var(--space-sm);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.total-display h2 {
+    font-size: 1rem;
+    margin: 0;
+    color: white;
 }
 
 .total-amount {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--alpine-glow);
-    margin: var(--space-sm) 0;
+    margin: 0;
 }
 
 .total-breakdown {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     opacity: 0.8;
-    margin-bottom: var(--space-sm);
+    margin: 0;
+    flex: 1;
+    text-align: left;
 }
 
 .disclaimer {
-    font-size: 0.75rem;
-    opacity: 0.6;
+    display: none; /* Hide on mobile to save space */
 }
 
 @media (max-width: 768px) {
@@ -465,8 +487,31 @@ description: Build your personalised trip budget with real-time calculations
         margin-left: 28px;
     }
     
+    .total-display {
+        flex-wrap: wrap;
+        padding: var(--space-xs) var(--space-sm);
+    }
+    
+    .total-display h2 {
+        font-size: 0.9rem;
+    }
+    
     .total-amount {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .total-breakdown {
+        width: 100%;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .disclaimer {
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.6;
     }
 }
 
