@@ -1,195 +1,597 @@
 ---
 layout: default
-title: Costs & Booking
-description: Transparent pricing breakdown for the ski trip
+title: Costs & Calculator
+description: Build your personalised trip budget with real-time calculations
 ---
 
 <section class="section">
     <div class="container">
-        <h1>Costs & Booking</h1>
-        <p class="lead">All prices are estimates and will be confirmed once we have final numbers</p>
+        <h1>Trip Costs & Calculator</h1>
+        <p class="lead">Build your personalised budget • All prices are estimates to be confirmed</p>
         
-        <div class="cost-cards">
-            <div class="card">
-                <h3>🏠 Accommodation</h3>
-                <p class="cost-display">£630 - £755</p>
-                <p>Per person for 7 nights</p>
-                <ul>
-                    <li>Chalet La Koala (6 bedrooms)</li>
-                    <li>Private hot tub & sauna</li>
-                    <li>All cleaning & services included</li>
-                    <li>Based on 10-12 people sharing</li>
-                </ul>
-                <p class="note">Total: £7,542.50 for the week</p>
-                <a href="https://www.airbnb.co.uk/rooms/38691452?source_impression_id=p3_1754340894_P3Fp2PND4v4MxtcC" target="_blank" class="small-link">View on Airbnb →</a>
-            </div>
-            
-            <div class="card">
-                <h3>✈️ Flights</h3>
-                <p class="cost-display">£235 - £320</p>
-                <p>Return from London Gatwick</p>
-                <ul>
-                    <li>Direct flights to Geneva</li>
-                    <li>BA includes hold luggage</li>
-                    <li>Free ski carriage with BA</li>
-                    <li>Book early for best prices</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h3>🎿 Ski Pass</h3>
-                <p class="cost-display">€380 - €420</p>
-                <p>6-day 3 Valleys pass</p>
-                <ul>
-                    <li>Access to 600km of pistes</li>
-                    <li>Covers all 3 Valleys resorts</li>
-                    <li>Beginner area passes available</li>
-                    <li>Group discounts possible</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h3>🚌 Transfers</h3>
-                <p class="cost-display">£80 - £120</p>
-                <p>Return airport transfers <span class="ai-note">(AI estimated)</span></p>
-                <ul>
-                    <li>Geneva Airport to La Tania</li>
-                    <li>Shared transfer service</li>
-                    <li>~2.5 hours each way</li>
-                    <li>Price depends on group size</li>
-                </ul>
-                <p class="note">To be confirmed by Tim</p>
-            </div>
-            
-            <div class="card">
-                <h3>🎿 Equipment Rental</h3>
-                <p class="cost-display">€150 - €250</p>
-                <p>For the week <span class="ai-note">(AI estimated)</span></p>
-                <ul>
-                    <li>Skis, boots & poles</li>
-                    <li>Premium equipment available</li>
-                    <li>Helmet rental ~€30</li>
-                    <li>Book in advance for discounts</li>
-                </ul>
-                <p class="note">Tim to confirm shop & prices</p>
-            </div>
-            
-            <div class="card">
-                <h3>🏥 Insurance</h3>
-                <p class="cost-display">£40 - £80</p>
-                <p>Winter sports cover</p>
-                <ul>
-                    <li>Essential for skiing</li>
-                    <li>Medical & rescue cover</li>
-                    <li>Equipment protection</li>
-                    <li>Check existing policies first</li>
-                </ul>
-            </div>
+        <div class="important-note">
+            <h3>⚠️ Important Booking Information</h3>
+            <ul>
+                <li><strong>Resort bookings are Saturday to Saturday only</strong> - you can't book partial weeks</li>
+                <li><strong>Accommodation must be paid for the full week</strong> even if staying fewer nights</li>
+                <li><strong>Partial stays welcome</strong> but you'll need to arrange your own transfers</li>
+                <li><strong>Group discount</strong> - the more people, the lower the per-person accommodation cost</li>
+            </ul>
         </div>
         
-        <div class="total-estimate">
-            <h2>Estimated Total</h2>
-            <p class="total-range">£1,250 - £1,650</p>
-            <p>Per person, excluding food, drinks & ski lessons</p>
-            <p class="breakdown">Accommodation + Flights + Ski Pass + Transfers + Equipment + Insurance</p>
+        <!-- Preset Buttons -->
+        <div class="preset-buttons">
+            <button class="preset-btn" onclick="applyPreset('beginner')">
+                🎿 First Timer
+                <span class="preset-desc">Everything included</span>
+            </button>
+            <button class="preset-btn" onclick="applyPreset('intermediate')">
+                ⛷️ Regular Skier
+                <span class="preset-desc">Own boots & helmet</span>
+            </button>
+            <button class="preset-btn" onclick="applyPreset('pro')">
+                🏔️ Pro Skier
+                <span class="preset-desc">Own gear, no lessons</span>
+            </button>
+            <button class="preset-btn" onclick="applyPreset('budget')">
+                💰 Budget Conscious
+                <span class="preset-desc">Minimum costs</span>
+            </button>
+        </div>
+
+        <!-- Cost Builder -->
+        <div class="cost-builder">
             
-            <div class="calculator-link">
-                <a href="{{ '/costs-interactive' | relative_url }}" class="btn btn-primary">
-                    🧮 Try the Interactive Cost Calculator
-                </a>
+            <!-- Fixed Costs -->
+            <div class="cost-section">
+                <h2>Essential Costs</h2>
+                
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="accommodation" checked disabled>
+                        <span>🏠 Accommodation</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="accommodation-occupancy" onchange="updateCosts()">
+                            <option value="755">Based on 10 people (£755)</option>
+                            <option value="693" selected>Based on 11 people (£693)</option>
+                            <option value="630">Based on 12 people (£630)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="flights" checked onchange="updateCosts()">
+                        <span>✈️ Flights</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="flight-type" onchange="updateCosts()">
+                            <optgroup label="From London">
+                                <option value="235">Budget flight (£235)</option>
+                                <option value="280" selected>BA with luggage (£280)</option>
+                                <option value="320">Flexible ticket (£320)</option>
+                            </optgroup>
+                            <optgroup label="From Asia (Indicative)">
+                                <option value="840">Hong Kong return (£840)</option>
+                                <option value="560">Shanghai return (£560)</option>
+                                <option value="630">Kuala Lumpur return (£630)</option>
+                            </optgroup>
+                        </select>
+                        <label class="sub-option">
+                            <input type="checkbox" id="hold-luggage" checked onchange="updateCosts()">
+                            Hold luggage (+£45 if not BA)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="transfers" checked onchange="updateCosts()">
+                        <span>🚌 Airport Transfers</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="transfer-type" onchange="updateCosts()">
+                            <option value="55">Ben's Bus shared (£30-81)</option>
+                            <option value="100" selected>Group shared transfer (£100)</option>
+                            <option value="125">Private transfer (£125)</option>
+                        </select>
+                        <div class="sub-note">Geneva to La Tania, ~2.5 hours</div>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="skipass" checked onchange="updateCosts()">
+                        <span>🎫 Ski Pass (6 days)</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="skipass-type" onchange="updateCosts()">
+                            <option value="350">3 Valleys (€400 ≈ £350)</option>
+                            <option value="280">Courchevel only (€320 ≈ £280)</option>
+                            <option value="150">Beginner area (€170 ≈ £150)</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
+            <!-- Equipment -->
+            <div class="cost-section">
+                <h2>Equipment Rental</h2>
+                
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="skis" checked onchange="updateCosts()">
+                        <span>🎿 Skis & Poles</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="ski-level" onchange="updateCosts()">
+                            <option value="90">Basic skis (€100 ≈ £90)</option>
+                            <option value="135" selected>Standard skis (€150 ≈ £135)</option>
+                            <option value="180">Premium skis (€200 ≈ £180)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="boots" checked onchange="updateCosts()">
+                        <span>🥾 Ski Boots</span>
+                    </label>
+                    <div class="cost-details">
+                        <span class="price-note">€50 ≈ £45</span>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="helmet" onchange="updateCosts()">
+                        <span>⛑️ Helmet</span>
+                    </label>
+                    <div class="cost-details">
+                        <span class="price-note">€30 ≈ £27</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lessons -->
+            <div class="cost-section">
+                <h2>Ski Instruction</h2>
+                
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="lessons" onchange="updateCosts()">
+                        <span>👨‍🏫 Ski Lessons</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="lesson-type" onchange="updateCosts()">
+                            <option value="0">No lessons</option>
+                            <option value="280">Group lessons - 6 days (€320 ≈ £280)</option>
+                            <option value="350">2 x half-day private (€400 ≈ £350)</option>
+                            <option value="525">3 x half-day private (€600 ≈ £525)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food & Drink -->
+            <div class="cost-section">
+                <h2>Food & Drink Estimates</h2>
+                <p class="section-note">Typical week: Cook 2 nights, fondue/raclette night, eat out 3 nights</p>
+                
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="food" checked onchange="updateCosts()">
+                        <span>🍽️ Food Budget</span>
+                    </label>
+                    <div class="cost-details">
+                        <div class="food-breakdown">
+                            <div>Lunches on mountain: €15-25 x 6 = €90-150</div>
+                            <div>Dinners out: €25-40 x 3 = €75-120</div>
+                            <div>Group cooking/drinks: ~€50</div>
+                            <div class="total-estimate">Total: €215-320 (£190-280)</div>
+                        </div>
+                        <select id="food-budget" onchange="updateCosts()">
+                            <option value="190">Budget eating (£190)</option>
+                            <option value="235" selected>Normal eating (£235)</option>
+                            <option value="280">Foodie experience (£280)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="chef" onchange="updateCosts()">
+                        <span>👨‍🍳 Private Chef (2 evenings)</span>
+                    </label>
+                    <div class="cost-details">
+                        <select id="chef-option" onchange="updateCosts()">
+                            <option value="0">No chef service</option>
+                            <option value="340">Standard chef - 6 nights (£340)</option>
+                            <option value="420">Premium chef with butler (£420)</option>
+                        </select>
+                        <div class="sub-note">Full week service, 3-course dinners</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other -->
+            <div class="cost-section">
+                <h2>Additional Costs</h2>
+                
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="insurance" checked onchange="updateCosts()">
+                        <span>🏥 Winter Sports Insurance</span>
+                    </label>
+                    <div class="cost-details">
+                        <span class="price-note">£60 (check existing policies)</span>
+                    </div>
+                </div>
+
+                <div class="cost-item">
+                    <label>
+                        <input type="checkbox" id="extras" onchange="updateCosts()">
+                        <span>🎉 Après-ski & Extras</span>
+                    </label>
+                    <div class="cost-details">
+                        <span class="price-note">£100 (drinks, activities)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Display -->
+        <div class="total-display">
+            <h2>Your Estimated Total</h2>
+            <div class="total-amount" id="total-amount">£0</div>
+            <div class="total-breakdown" id="total-breakdown"></div>
+            <p class="disclaimer">Prices are estimates and may vary. Food/drink costs depend on personal choices.</p>
         </div>
     </div>
 </section>
 
 <style>
-.cost-cards {
+.preset-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--space-sm);
-    margin-top: var(--space-md);
     margin-bottom: var(--space-lg);
 }
 
-.cost-cards .card {
-    position: relative;
-    overflow: hidden;
-}
-
-.cost-cards .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--sky), var(--sky-light));
-}
-
-.cost-cards h3 {
-    margin-bottom: var(--space-sm);
-}
-
-.cost-cards ul {
-    margin-top: var(--space-sm);
-    padding-left: 1.2rem;
-}
-
-.cost-cards li {
-    margin-bottom: 0.25rem;
-    color: var(--glacier);
-}
-
-.total-estimate {
+.preset-btn {
+    background: white;
+    border: 2px solid var(--sky);
+    border-radius: 8px;
+    padding: var(--space-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-align: center;
-    padding: var(--space-lg);
-    background: var(--mist);
-    border-radius: 12px;
-    margin-top: var(--space-lg);
 }
 
-.total-range {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--sky);
-    margin: var(--space-sm) 0;
+.preset-btn:hover {
+    background: var(--powder);
+    transform: translateY(-2px);
 }
 
-.breakdown {
+.preset-desc {
+    display: block;
     font-size: 0.875rem;
     color: var(--glacier);
-    margin-top: var(--space-sm);
-}
-
-.small-link {
-    font-size: 0.875rem;
-    color: var(--sky);
-    text-decoration: none;
-    display: inline-block;
     margin-top: var(--space-xs);
 }
 
-.small-link:hover {
-    text-decoration: underline;
+.cost-builder {
+    background: white;
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
-.ai-note {
-    font-size: 0.75rem;
+.cost-section {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--mist);
+}
+
+.cost-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cost-section h2 {
+    color: var(--sky);
+    margin-bottom: var(--space-sm);
+}
+
+.section-note {
+    font-size: 0.875rem;
+    color: var(--glacier);
+    margin-bottom: var(--space-md);
+}
+
+.cost-item {
+    margin-bottom: var(--space-md);
+}
+
+.cost-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cost-item input[type="checkbox"] {
+    margin-right: var(--space-sm);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.cost-details {
+    margin-left: 32px;
+    margin-top: var(--space-xs);
+}
+
+.cost-details select {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid var(--shadow);
+    border-radius: 4px;
+    margin-top: var(--space-xs);
+}
+
+.sub-option {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space-xs);
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.price-note {
+    color: var(--glacier);
+    font-size: 0.9rem;
+}
+
+.sub-note {
+    font-size: 0.8rem;
     color: var(--glacier);
     font-style: italic;
+    margin-top: var(--space-xs);
+}
+
+.food-breakdown {
+    background: var(--mist);
+    padding: var(--space-sm);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin-bottom: var(--space-sm);
+}
+
+.food-breakdown div {
+    margin-bottom: var(--space-xs);
+}
+
+.total-estimate {
+    font-weight: 600;
+    color: var(--sky);
+    margin-top: var(--space-xs);
+}
+
+.total-display {
+    background: var(--midnight);
+    color: white;
+    padding: var(--space-lg);
+    border-radius: 8px;
+    text-align: center;
+    position: sticky;
+    bottom: var(--space-md);
+}
+
+.total-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--alpine-glow);
+    margin: var(--space-sm) 0;
+}
+
+.total-breakdown {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: var(--space-sm);
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    opacity: 0.6;
 }
 
 @media (max-width: 768px) {
-    .cost-cards {
-        grid-template-columns: 1fr;
+    .preset-buttons {
+        grid-template-columns: 1fr 1fr;
     }
     
-    .total-range {
+    .cost-details {
+        margin-left: 28px;
+    }
+    
+    .total-amount {
         font-size: 2rem;
     }
 }
 
-.calculator-link {
-    margin-top: var(--space-lg);
+.important-note {
+    background: var(--powder);
+    border: 2px solid var(--sky);
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.important-note h3 {
+    color: var(--sky);
+    margin-bottom: var(--space-sm);
+}
+
+.important-note ul {
+    list-style: none;
+    padding: 0;
+}
+
+.important-note li {
+    padding: var(--space-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.important-note li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sky);
+    font-weight: bold;
+}
+
+optgroup {
+    font-weight: bold;
+    color: var(--sky);
 }
 </style>
+
+<script>
+// Cost data
+const costs = {
+    accommodation: () => parseInt(document.getElementById('accommodation-occupancy').value),
+    flights: () => document.getElementById('flights').checked ? parseInt(document.getElementById('flight-type').value) : 0,
+    holdLuggage: () => {
+        const flightType = document.getElementById('flight-type').value;
+        const needsLuggage = document.getElementById('hold-luggage').checked;
+        return (flightType === '235' && needsLuggage) ? 45 : 0;
+    },
+    transfers: () => document.getElementById('transfers').checked ? parseInt(document.getElementById('transfer-type').value) : 0,
+    skipass: () => document.getElementById('skipass').checked ? parseInt(document.getElementById('skipass-type').value) : 0,
+    skis: () => document.getElementById('skis').checked ? parseInt(document.getElementById('ski-level').value) : 0,
+    boots: () => document.getElementById('boots').checked ? 45 : 0,
+    helmet: () => document.getElementById('helmet').checked ? 27 : 0,
+    lessons: () => {
+        const lessonType = document.getElementById('lesson-type').value;
+        return document.getElementById('lessons').checked ? parseInt(lessonType) : 0;
+    },
+    food: () => document.getElementById('food').checked ? parseInt(document.getElementById('food-budget').value) : 0,
+    chef: () => document.getElementById('chef').checked ? parseInt(document.getElementById('chef-option').value) : 0,
+    insurance: () => document.getElementById('insurance').checked ? 60 : 0,
+    extras: () => document.getElementById('extras').checked ? 100 : 0
+};
+
+// Presets
+const presets = {
+    beginner: {
+        flights: true,
+        holdLuggage: true,
+        transfers: true,
+        skipass: true,
+        skipassType: '350',
+        skis: true,
+        skiLevel: '135',
+        boots: true,
+        helmet: true,
+        lessons: true,
+        lessonType: '280',
+        food: true,
+        foodBudget: '235',
+        insurance: true
+    },
+    intermediate: {
+        flights: true,
+        holdLuggage: true,
+        transfers: true,
+        skipass: true,
+        skipassType: '350',
+        skis: true,
+        skiLevel: '180',
+        boots: false,
+        helmet: false,
+        lessons: false,
+        lessonType: '0',
+        food: true,
+        foodBudget: '235',
+        insurance: true
+    },
+    pro: {
+        flights: true,
+        holdLuggage: true,
+        transfers: true,
+        skipass: true,
+        skipassType: '350',
+        skis: false,
+        boots: false,
+        helmet: false,
+        lessons: false,
+        lessonType: '0',
+        food: true,
+        foodBudget: '280',
+        insurance: true,
+        extras: true
+    },
+    budget: {
+        flights: true,
+        flightType: '235',
+        holdLuggage: false,
+        transfers: true,
+        skipass: true,
+        skipassType: '280',
+        skis: true,
+        skiLevel: '90',
+        boots: true,
+        helmet: false,
+        lessons: false,
+        lessonType: '0',
+        food: true,
+        foodBudget: '190',
+        insurance: true
+    }
+};
+
+function applyPreset(presetName) {
+    const preset = presets[presetName];
+    
+    // Apply checkbox states
+    Object.keys(preset).forEach(key => {
+        const element = document.getElementById(key.replace(/([A-Z])/g, '-$1').toLowerCase());
+        if (element) {
+            if (element.type === 'checkbox') {
+                element.checked = preset[key];
+            } else {
+                element.value = preset[key];
+            }
+        }
+    });
+    
+    updateCosts();
+}
+
+function updateCosts() {
+    let total = 0;
+    const breakdown = [];
+    
+    // Calculate each cost
+    Object.keys(costs).forEach(key => {
+        const cost = costs[key]();
+        if (cost > 0) {
+            total += cost;
+            const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
+            breakdown.push(`${label}: £${cost}`);
+        }
+    });
+    
+    // Update display
+    document.getElementById('total-amount').textContent = `£${total}`;
+    document.getElementById('total-breakdown').textContent = breakdown.join(' • ');
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', updateCosts);
+</script>

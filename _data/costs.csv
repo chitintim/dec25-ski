@@ -1,0 +1,29 @@
+category,item,min_price,max_price,currency,notes,ai_estimated
+Accommodation,Chalet La Koala (10 people),755,755,GBP,Per person for 7 nights,false
+Accommodation,Chalet La Koala (11 people),693,693,GBP,Per person for 7 nights,false
+Accommodation,Chalet La Koala (12 people),630,630,GBP,Per person for 7 nights,false
+Flights,London Gatwick Budget,235,235,GBP,EasyJet/similar - no luggage,false
+Flights,London Gatwick BA,280,280,GBP,Includes hold luggage,false
+Flights,London Gatwick Flexible,320,320,GBP,Flexible ticket with luggage,false
+Flights,Hong Kong Return,840,840,GBP,Indicative price - to be confirmed,true
+Flights,Shanghai Return,560,560,GBP,Indicative price - to be confirmed,true
+Flights,Kuala Lumpur Return,630,630,GBP,Indicative price - to be confirmed,true
+Transfers,Geneva Airport Shared,30,81,GBP,Ben's Bus or similar,false
+Transfers,Geneva Airport Private,100,150,GBP,Private transfer for group,true
+Ski Pass,3 Valleys 6 days,350,385,GBP,Full area access,false
+Ski Pass,Courchevel Only 6 days,280,315,GBP,Limited to Courchevel valley,false
+Ski Pass,Beginner Area 6 days,150,170,GBP,Green runs only,false
+Equipment,Basic Ski Package,90,120,GBP,Skis boots poles for week,false
+Equipment,Standard Ski Package,135,170,GBP,Better quality equipment,false
+Equipment,Premium Ski Package,180,220,GBP,High-end equipment,false
+Equipment,Ski Boots Only,45,45,GBP,If you have own skis,false
+Equipment,Helmet Rental,27,30,GBP,Safety first,false
+Lessons,Group Lessons 6 days,280,320,GBP,Morning group lessons,false
+Lessons,Private Half Day x2,350,400,GBP,Two half-day sessions,false
+Lessons,Private Half Day x3,525,600,GBP,Three half-day sessions,false
+Food,Budget Daily Food,30,35,GBP,Per day estimate,true
+Food,Normal Daily Food,40,45,GBP,Per day estimate,true
+Food,Foodie Daily Food,50,60,GBP,Per day estimate,true
+Chef,Private Chef Full Week,340,420,GBP,6 nights of 3-course dinners per person,false
+Insurance,Winter Sports Cover,40,80,GBP,Essential coverage,false
+Extras,Apres Ski Budget,100,150,GBP,Drinks and activities,true
