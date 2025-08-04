@@ -28,13 +28,16 @@ function updateCountdown() {
     }
 }
 
-// Parallax Mountain Background
+// Enhanced Parallax for Layered Mountains
 function handleParallax() {
     const scrolled = window.pageYOffset;
-    const mountain = document.querySelector('.mountain-bg');
-    if (mountain) {
-        mountain.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
+    const layer1 = document.querySelector('.mountain-layer-1');
+    const layer2 = document.querySelector('.mountain-layer-2');
+    const layer3 = document.querySelector('.mountain-layer-3');
+    
+    if (layer1) layer1.style.transform = `translateY(${scrolled * 0.3}px)`;
+    if (layer2) layer2.style.transform = `translateY(${scrolled * 0.5}px) translateX(-10%)`;
+    if (layer3) layer3.style.transform = `translateY(${scrolled * 0.7}px) translateX(5%)`;
 }
 
 // Mobile Menu Toggle

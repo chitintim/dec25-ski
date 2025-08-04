@@ -20,10 +20,18 @@
     {% seo %}
 </head>
 <body>
-    <!-- Mountain Background -->
-    <svg class="mountain-bg" viewBox="0 0 1440 400" aria-hidden="true">
-        <path d="M0,400 L360,100 L720,250 L1080,80 L1440,300 L1440,400 Z" fill="currentColor"/>
-    </svg>
+    <!-- Enhanced Mountain Background -->
+    <div class="mountain-bg">
+        <svg class="mountain-layer mountain-layer-1" viewBox="0 0 1440 400" aria-hidden="true">
+            <path d="M0,400 L360,100 L720,250 L1080,80 L1440,300 L1440,400 Z" fill="currentColor"/>
+        </svg>
+        <svg class="mountain-layer mountain-layer-2" viewBox="0 0 1440 400" aria-hidden="true">
+            <path d="M0,400 L480,150 L960,280 L1440,120 L1440,400 Z" fill="currentColor"/>
+        </svg>
+        <svg class="mountain-layer mountain-layer-3" viewBox="0 0 1440 400" aria-hidden="true">
+            <path d="M0,400 L240,200 L600,300 L900,150 L1200,250 L1440,180 L1440,400 Z" fill="currentColor"/>
+        </svg>
+    </div>
 
     <!-- Navigation -->
     {% include navigation.html %}

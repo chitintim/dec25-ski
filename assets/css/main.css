@@ -172,19 +172,50 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Mountain Background */
+/* Mountain Background - Enhanced */
 .mountain-bg {
   position: fixed;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
-  width: 100%;
-  height: 200px;
-  max-height: 30vh;
+  width: 120%;
+  height: 250px;
+  max-height: 35vh;
   z-index: -1;
-  color: var(--sky);
-  opacity: 0.05;
-  transition: transform 0.5s ease-out;
   pointer-events: none;
+}
+
+.mountain-layer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mountain-layer-1 {
+  color: var(--sky);
+  opacity: 0.08;
+  animation: drift 20s ease-in-out infinite;
+}
+
+.mountain-layer-2 {
+  color: var(--glacier);
+  opacity: 0.06;
+  animation: drift 25s ease-in-out infinite reverse;
+  transform: translateX(-10%);
+}
+
+.mountain-layer-3 {
+  color: var(--midnight);
+  opacity: 0.03;
+  animation: drift 30s ease-in-out infinite;
+  transform: translateX(5%);
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-2%) translateY(-5px); }
+  50% { transform: translateX(1%) translateY(0); }
+  75% { transform: translateX(-1%) translateY(-3px); }
 }
 
 /* Navigation */

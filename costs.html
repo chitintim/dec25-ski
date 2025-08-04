@@ -21,6 +21,7 @@ description: Transparent pricing breakdown for the ski trip
                     <li>Based on 10-12 people sharing</li>
                 </ul>
                 <p class="note">Total: £7,542.50 for the week</p>
+                <a href="https://www.airbnb.co.uk/rooms/38691452?source_impression_id=p3_1754340894_P3Fp2PND4v4MxtcC" target="_blank" class="small-link">View on Airbnb →</a>
             </div>
             
             <div class="card">
@@ -50,25 +51,27 @@ description: Transparent pricing breakdown for the ski trip
             <div class="card">
                 <h3>🚌 Transfers</h3>
                 <p class="cost-display">£80 - £120</p>
-                <p>Return airport transfers</p>
+                <p>Return airport transfers <span class="ai-note">(AI estimated)</span></p>
                 <ul>
                     <li>Geneva Airport to La Tania</li>
                     <li>Shared transfer service</li>
                     <li>~2.5 hours each way</li>
                     <li>Price depends on group size</li>
                 </ul>
+                <p class="note">To be confirmed by Tim</p>
             </div>
             
             <div class="card">
                 <h3>🎿 Equipment Rental</h3>
                 <p class="cost-display">€150 - €250</p>
-                <p>For the week</p>
+                <p>For the week <span class="ai-note">(AI estimated)</span></p>
                 <ul>
                     <li>Skis, boots & poles</li>
                     <li>Premium equipment available</li>
                     <li>Helmet rental ~€30</li>
                     <li>Book in advance for discounts</li>
                 </ul>
+                <p class="note">Tim to confirm shop & prices</p>
             </div>
             
             <div class="card">
@@ -150,6 +153,24 @@ description: Transparent pricing breakdown for the ski trip
     font-size: 0.875rem;
     color: var(--glacier);
     margin-top: var(--space-sm);
+}
+
+.small-link {
+    font-size: 0.875rem;
+    color: var(--sky);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: var(--space-xs);
+}
+
+.small-link:hover {
+    text-decoration: underline;
+}
+
+.ai-note {
+    font-size: 0.75rem;
+    color: var(--glacier);
+    font-style: italic;
 }
 
 @media (max-width: 768px) {
