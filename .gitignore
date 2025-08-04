@@ -1,0 +1,43 @@
+# Private and contextual information
+CONTEXT.md
+PRIVATE_NOTES.md
+.env
+.env.local
+
+# Personal data
+contacts.txt
+personal_details/
+financial_details/
+
+# Booking confirmations and references
+bookings/
+confirmations/
+*.booking
+*.confirmation
+
+# Private photos
+private_photos/
+unedited_photos/
+
+# WhatsApp exports
+whatsapp_exports/
+chat_backups/
+
+# Development files
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+.*.swp
+
+# API keys and secrets
+secrets/
+api_keys.txt
+credentials.json

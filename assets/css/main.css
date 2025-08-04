@@ -1,0 +1,368 @@
+/* La Tania 2025 - Main Styles */
+
+/* CSS Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables */
+:root {
+  /* Colours */
+  --snow: #FAFAFA;
+  --sky: #0369A1;
+  --sky-light: #0284C7;
+  --midnight: #1E293B;
+  --alpine-glow: #FDA4AF;
+  --powder: #E0F2FE;
+  --pine: #14532D;
+  --glacier: #64748B;
+  --mist: #F1F5F9;
+  --shadow: #94A3B8;
+  
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease-out;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--midnight);
+  background-color: var(--snow);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+p {
+  color: var(--glacier);
+  margin-bottom: var(--space-sm);
+}
+
+a {
+  color: var(--sky);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--sky-light);
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, var(--snow) 0%, var(--powder) 100%);
+}
+
+.hero-title {
+  margin-bottom: var(--space-xs);
+  color: var(--midnight);
+}
+
+.hero-title .accent {
+  color: var(--sky);
+  display: inline-block;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.hero-dates {
+  font-size: 1.5rem;
+  color: var(--glacier);
+  margin-bottom: var(--space-lg);
+  font-weight: 300;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--sky), var(--sky-light));
+  color: white;
+  box-shadow: 0 2px 8px rgba(3, 105, 161, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(3, 105, 161, 0.3);
+  text-decoration: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--sky);
+  border: 2px solid var(--sky);
+}
+
+.btn-ghost:hover {
+  background: var(--sky);
+  color: white;
+  text-decoration: none;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: var(--space-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Mountain Background */
+.mountain-bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  z-index: -1;
+  color: var(--sky);
+  opacity: 0.05;
+  transition: transform 0.5s ease-out;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(250, 250, 250, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: var(--transition);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.nav-link {
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sky);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.scroll-indicator::before {
+  content: '⛷️';
+  font-size: 2rem;
+}
+
+/* Section Spacing */
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section-alt {
+  background: var(--mist);
+}
+
+/* Countdown Timer */
+.countdown {
+  display: inline-flex;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: var(--space-lg) 0;
+}
+
+.countdown-item {
+  text-align: center;
+  padding: 0 var(--space-sm);
+}
+
+.countdown-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--sky);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.875rem;
+  color: var(--glacier);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Cost Display */
+.cost-display {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  color: var(--pine);
+  font-weight: 600;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .countdown {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Fun Hover Effects */
+.wiggle:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+/* Loading Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, var(--mist) 0%, var(--snow) 50%, var(--mist) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

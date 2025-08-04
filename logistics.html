@@ -1,0 +1,133 @@
+---
+layout: default
+title: Getting There
+description: Travel logistics and transfer information
+---
+
+<section class="section">
+    <div class="container">
+        <h1>Getting There</h1>
+        <p class="lead">Making your journey to the Alps as smooth as possible</p>
+        
+        <div class="logistics-sections">
+            <div class="card">
+                <h2>✈️ Flights</h2>
+                <h3>Recommended Route</h3>
+                <p><strong>London Gatwick → Geneva</strong> - Direct flights, 1h 40min</p>
+                
+                <div class="flight-options">
+                    <h4>Best Options (21st Dec)</h4>
+                    <ul>
+                        <li><strong>BA (14:45 → 17:25)</strong> - £320 return inc. hold luggage</li>
+                        <li><strong>BA (16:15 → 18:55)</strong> - From £235 + luggage</li>
+                        <li><strong>easyJet (09:05 → 11:45)</strong> - From £257 + luggage</li>
+                    </ul>
+                    
+                    <h4>Return Options (28th Dec)</h4>
+                    <ul>
+                        <li><strong>BA (19:45 → 20:30)</strong> - Best for transfers</li>
+                        <li><strong>BA (18:20 → 19:05)</strong> - Earlier option</li>
+                    </ul>
+                </div>
+                
+                <p class="tip">💡 <strong>Tip:</strong> BA includes free ski carriage with hold luggage!</p>
+            </div>
+            
+            <div class="card">
+                <h2>🚌 Transfers</h2>
+                <h3>Shared Transfer Service</h3>
+                <p>We'll arrange shared transfers to match flight times</p>
+                <ul>
+                    <li>Geneva Airport → La Tania: ~2.5 hours</li>
+                    <li>Cost: £XX-£XX per person return</li>
+                    <li>Meeting point: Arrivals hall</li>
+                </ul>
+                <p>Details to be confirmed once flight bookings are finalised</p>
+            </div>
+            
+            <div class="card">
+                <h2>📅 Arrival Day Schedule</h2>
+                <h3>Sunday 21st December</h3>
+                <ul class="timeline">
+                    <li><strong>14:45</strong> - Suggested departure from Gatwick</li>
+                    <li><strong>17:25</strong> - Arrive Geneva (local time)</li>
+                    <li><strong>18:30</strong> - Meet for transfers</li>
+                    <li><strong>21:00</strong> - Arrive at Chalet La Koala</li>
+                    <li><strong>21:30</strong> - Welcome drinks! 🥂</li>
+                </ul>
+                <p>Chalet check-in officially from 15:00 (3pm)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.logistics-sections {
+    display: grid;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.flight-options {
+    background: var(--mist);
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin: var(--space-sm) 0;
+}
+
+.flight-options h4 {
+    color: var(--sky);
+    margin-bottom: var(--space-xs);
+}
+
+.flight-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flight-options li {
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.flight-options li:last-child {
+    border-bottom: none;
+}
+
+.tip {
+    background: var(--powder);
+    padding: var(--space-sm);
+    border-radius: 6px;
+    margin-top: var(--space-sm);
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    padding: var(--space-xs) 0;
+    padding-left: var(--space-md);
+    position: relative;
+}
+
+.timeline li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sky);
+    font-size: 1.5rem;
+}
+
+.card h3 {
+    color: var(--midnight);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.card h4 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+}
+</style>

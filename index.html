@@ -1,0 +1,187 @@
+---
+layout: default
+title: Home
+description: Join us for an unforgettable ski trip to La Tania, Courchevel
+---
+
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title fade-in">
+            La Tania <span class="accent">2025</span>
+        </h1>
+        <p class="hero-dates fade-in">21st - 28th December</p>
+        
+        <div class="countdown fade-in" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" data-days>00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" data-hours>00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" data-minutes>00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+        </div>
+        
+        <div class="hero-cta fade-in">
+            <a href="{{ '/costs' | relative_url }}" class="btn btn-primary">Check Costs</a>
+            <a href="{{ '/trip-details' | relative_url }}" class="btn btn-ghost">View Details</a>
+        </div>
+        
+        <div class="scroll-indicator"></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center">The Experience</h2>
+        <div class="features-grid">
+            <div class="card fade-in">
+                <h3>🏔️ Perfect Location</h3>
+                <p>Chalet La Koala in La Tania - gateway to the massive 3 Valleys ski area with 600km of pistes</p>
+            </div>
+            <div class="card fade-in">
+                <h3>🏠 Luxury Chalet</h3>
+                <p>6 bedrooms for 12 people, private hot tub & sauna, close to the slopes</p>
+            </div>
+            <div class="card fade-in">
+                <h3>👥 Great Group</h3>
+                <p>Mix of experienced skiers and beginners - everyone welcome!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center">Why Courchevel... Again?</h2>
+        <p class="lead text-center">Look, Tim's basically lived here for 20+ weeks over the past 4 years. He's obsessed. Here's why...</p>
+        
+        <div class="value-grid">
+            <div class="value-card">
+                <h3>🌍 It's Stupidly Big</h3>
+                <p>600km of slopes. That's like skiing from London to Edinburgh. You literally can't ski it all in a week. Tim's still finding new runs after all these years (or so he claims).</p>
+            </div>
+            
+            <div class="value-card">
+                <h3>🎯 Tim Knows Everyone</h3>
+                <p>The lift operators wave. Restaurant owners save tables. Ski rental guys have his boots ready. After 20+ weeks here, he's basically a local who happens to live in the UK.</p>
+            </div>
+            
+            <div class="value-card">
+                <h3>✨ It's Not Just Skiing</h3>
+                <p>3pm hot tub sessions with mountain views. That restaurant where they know to bring extra bread. The tree run that's always got fresh powder. These little moments make the trip.</p>
+            </div>
+            
+            <div class="value-card">
+                <h3>🚀 Zero Faff Guarantee</h3>
+                <p>Tim's done this so many times he could organise it in his sleep. No "where's the meeting point?" or "which lift pass do we need?" - just rock up and ski.</p>
+            </div>
+        </div>
+        
+        <div class="testimonial-box">
+            <p class="testimonial">"My mate went to Bulgaria for £500. I spent triple that with Tim. Guess who's still talking about their trip? 
+            <br><br>
+            Spoiler: It's me. Bulgaria mate just complains about the food poisoning."</p>
+            <p class="testimonial-author">- Someone who gets it</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container text-center">
+        <h2>Ready to Join?</h2>
+        <p class="lead">Limited spaces available - secure your spot soon!</p>
+        <div class="cta-buttons">
+            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">Get in Touch</a>
+            <a href="{{ '/faqs' | relative_url }}" class="btn btn-ghost">Read FAQs</a>
+        </div>
+    </div>
+</section>
+
+<style>
+.text-center { text-align: center; }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--glacier);
+    margin-bottom: var(--space-md);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.value-card {
+    padding: var(--space-md);
+}
+
+.value-card h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--midnight);
+}
+
+.testimonial-box {
+    max-width: 800px;
+    margin: var(--space-xl) auto 0;
+    padding: var(--space-lg);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.testimonial {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--glacier);
+    font-style: italic;
+    margin: 0;
+}
+
+.testimonial-author {
+    margin-top: var(--space-sm);
+    color: var(--sky);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

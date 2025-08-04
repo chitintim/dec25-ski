@@ -1,0 +1,91 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ '/costs' | relative_url }}">View Costs</a></li>
+                    <li><a href="{{ '/faqs' | relative_url }}">FAQs</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}">Contact Tim</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Key Dates</h4>
+                <p>Check-in: Sunday 21st Dec, 3pm</p>
+                <p>Check-out: Sunday 28th Dec, 10am</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Stay Updated</h4>
+                <p>Join our WhatsApp group for real-time updates</p>
+                <a href="{{ '/contact' | relative_url }}" class="btn btn-ghost">Get in Touch</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 - Organised by Tim</p>
+            <p class="footer-countdown" id="mini-countdown"></p>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer {
+    background: var(--midnight);
+    color: white;
+    padding: var(--space-lg) 0 var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.footer-section h4 {
+    color: white;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: var(--powder);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.footer-countdown {
+    font-size: 0.875rem;
+    color: var(--powder);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>

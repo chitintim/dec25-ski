@@ -1,0 +1,31 @@
+# Jekyll configuration for La Tania 2025
+
+title: La Tania 2025
+description: Annual ski trip to Courchevel - 21st-28th December
+author: Tim
+baseurl: "" # Leave empty unless using project page
+url: "" # Your GitHub Pages URL will go here
+
+# Build settings
+markdown: kramdown
+theme: null # Using custom theme
+
+# Exclude files from build
+exclude:
+  - docs/
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+
+# Default layout
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

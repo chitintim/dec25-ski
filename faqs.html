@@ -1,0 +1,140 @@
+---
+layout: default
+title: FAQs
+description: Frequently asked questions about the ski trip
+---
+
+<section class="section">
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p class="lead">Got questions? We've got answers!</p>
+        
+        <div class="faq-categories">
+            <h2>For First-Timers</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Why not just go to Bulgaria/Andorra/somewhere cheap?</summary>
+                    <p>Fair question! Tim tried that once. The lifts broke down, the snow was slush, and the "luxury" chalet had a view of a car park. Now he's spent 20+ weeks in Courchevel and refuses to ski anywhere else. Yes, it's pricier, but you get: actual snow, lifts that work, and a hot tub that doesn't smell weird. Your call!</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>I can't ski. Like, at all. Help?</summary>
+                    <p>Perfect! Half the group usually can't ski either. Day 1: You'll fall over. A lot. Day 2: You'll fall over slightly less. Day 3: You'll make it down a green run and feel like a hero. By the end of the week, you'll be racing others to the bar. We book lessons with English-speaking instructors who are used to terrified beginners.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Can't I just book this myself on Booking.com?</summary>
+                    <p>Sure, if you enjoy: comparing 47 different transfer companies, working out which ski pass covers what, finding a chalet for exactly 12 people, discovering the "ski-in/out" chalet is actually a 20-minute bus ride away... Tim's already made all these mistakes so you don't have to. Plus he knows which day to ski where based on weather/crowds/hangovers.</p>
+                </details>
+            </div>
+            
+            <h2>The Practical Stuff</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What's included in the accommodation?</summary>
+                    <p>The chalet comes with all bedding, towels, bathrobes, mid-week cleaning, end-of-stay cleaning, WiFi, and full use of the hot tub and sauna. The kitchen is fully equipped for self-catering, though most evenings we eat out together.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Can I join for part of the week?</summary>
+                    <p>Unfortunately not - the chalet is booked for the full week and costs are split equally among all participants. It also helps with group dynamics when everyone's there for the full experience.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>How does room allocation work?</summary>
+                    <p>We have 6 bedrooms (2 doubles, 1 twin, 3 TBC). Couples get priority for doubles, then it's first-come-first-served. Everyone gets a proper bed - no sofa beds or floor mattresses.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What about dietary requirements?</summary>
+                    <p>La Tania has good restaurants that cater to most dietary needs. When we book group meals, we always check requirements. The chalet has a full kitchen if you need to prepare specific meals.</p>
+                </details>
+            </div>
+            
+            <h2>For Returning Skiers</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Does Tim actually know secret spots or is he making it up?</summary>
+                    <p>20+ weeks = a lot of exploring. He knows: the tree run that ALWAYS has powder two days after a dump, the restaurant with the secret local menu (half price, twice as good), which lift to hit at 11:17am when everyone's at lunch, and that weird cut-through that saves 20 minutes getting back. He's basically a snow nerd at this point.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What if I'm actually good at skiing?</summary>
+                    <p>Brilliant! While the beginners are learning to pizza, you can explore: Saulire couloirs (proper steep stuff), Val Thorens glacier (highest skiing in Europe), epic off-piste through the trees, or just blast around showing off. Tim knows where the good stuff is, and there's always someone keen for "just one more run" at 4pm.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Is the hot tub actually that good?</summary>
+                    <p>Picture this: It's 5pm. Your legs are jelly. There's snow falling. You're in a hot tub with a beer, looking at mountains, planning tomorrow's routes, and someone's telling a story about their spectacular wipeout. Yes. It's that good. It's basically 40% of why we book this specific chalet.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.faq-categories h2 {
+    color: var(--sky);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+}
+
+.faq-categories h2:first-child {
+    margin-top: var(--space-lg);
+}
+
+.faq-list {
+    margin-bottom: var(--space-lg);
+}
+
+.faq-item {
+    background: white;
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-sm);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--midnight);
+    padding-right: var(--space-md);
+    position: relative;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--sky);
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item[open] summary {
+    color: var(--sky);
+    margin-bottom: var(--space-sm);
+}
+
+.faq-item p {
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .faq-item summary {
+        font-size: 0.95rem;
+    }
+}
+</style>

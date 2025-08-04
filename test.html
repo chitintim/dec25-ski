@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tania 2025 - Test Version</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Quick fixes for non-Jekyll version */
+        .nav-link.active { color: #0369A1; }
+        .nav-link.active::after { width: 100%; }
+    </style>
+</head>
+<body>
+    <!-- Mountain Background -->
+    <svg class="mountain-bg" viewBox="0 0 1440 400" aria-hidden="true">
+        <path d="M0,400 L360,100 L720,250 L1080,80 L1440,300 L1440,400 Z" fill="currentColor"/>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container container">
+            <a href="#" class="nav-logo">La Tania 2025 ⛷️</a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">Trip Details</a></li>
+                <li><a href="#" class="nav-link">Costs</a></li>
+                <li><a href="#" class="nav-link">FAQs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-in">
+                La Tania <span class="accent">2025</span>
+            </h1>
+            <p class="hero-dates fade-in">21st - 28th December</p>
+            
+            <div class="countdown fade-in">
+                <div class="countdown-item">
+                    <span class="countdown-number">--</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta fade-in">
+                <a href="#" class="btn btn-primary">Check Costs</a>
+                <a href="#" class="btn btn-ghost">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">The Experience</h2>
+            <div class="features-grid">
+                <div class="card">
+                    <h3>🏔️ Perfect Location</h3>
+                    <p>Chalet La Koala in La Tania - gateway to 600km of pistes</p>
+                </div>
+                <div class="card">
+                    <h3>🏠 Luxury Chalet</h3>
+                    <p>6 bedrooms, private hot tub & sauna</p>
+                </div>
+                <div class="card">
+                    <h3>👥 Great Group</h3>
+                    <p>Mix of abilities - everyone welcome!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #1E293B; color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>This is a test version - Jekyll features won't work</p>
+        <p>Run ./run-local.sh to see the full site</p>
+    </footer>
+
+    <script>
+        // Simple countdown for testing
+        const tripDate = new Date('2025-12-21');
+        const now = new Date();
+        const days = Math.floor((tripDate - now) / (1000 * 60 * 60 * 24));
+        document.querySelector('.countdown-number').textContent = days;
+    </script>
+</body>
+</html>

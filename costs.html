@@ -1,0 +1,164 @@
+---
+layout: default
+title: Costs & Booking
+description: Transparent pricing breakdown for the ski trip
+---
+
+<section class="section">
+    <div class="container">
+        <h1>Costs & Booking</h1>
+        <p class="lead">All prices are estimates and will be confirmed once we have final numbers</p>
+        
+        <div class="cost-cards">
+            <div class="card">
+                <h3>🏠 Accommodation</h3>
+                <p class="cost-display">£630 - £755</p>
+                <p>Per person for 7 nights</p>
+                <ul>
+                    <li>Chalet La Koala (6 bedrooms)</li>
+                    <li>Private hot tub & sauna</li>
+                    <li>All cleaning & services included</li>
+                    <li>Based on 10-12 people sharing</li>
+                </ul>
+                <p class="note">Total: £7,542.50 for the week</p>
+            </div>
+            
+            <div class="card">
+                <h3>✈️ Flights</h3>
+                <p class="cost-display">£235 - £320</p>
+                <p>Return from London Gatwick</p>
+                <ul>
+                    <li>Direct flights to Geneva</li>
+                    <li>BA includes hold luggage</li>
+                    <li>Free ski carriage with BA</li>
+                    <li>Book early for best prices</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🎿 Ski Pass</h3>
+                <p class="cost-display">€380 - €420</p>
+                <p>6-day 3 Valleys pass</p>
+                <ul>
+                    <li>Access to 600km of pistes</li>
+                    <li>Covers all 3 Valleys resorts</li>
+                    <li>Beginner area passes available</li>
+                    <li>Group discounts possible</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🚌 Transfers</h3>
+                <p class="cost-display">£80 - £120</p>
+                <p>Return airport transfers</p>
+                <ul>
+                    <li>Geneva Airport to La Tania</li>
+                    <li>Shared transfer service</li>
+                    <li>~2.5 hours each way</li>
+                    <li>Price depends on group size</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🎿 Equipment Rental</h3>
+                <p class="cost-display">€150 - €250</p>
+                <p>For the week</p>
+                <ul>
+                    <li>Skis, boots & poles</li>
+                    <li>Premium equipment available</li>
+                    <li>Helmet rental ~€30</li>
+                    <li>Book in advance for discounts</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🏥 Insurance</h3>
+                <p class="cost-display">£40 - £80</p>
+                <p>Winter sports cover</p>
+                <ul>
+                    <li>Essential for skiing</li>
+                    <li>Medical & rescue cover</li>
+                    <li>Equipment protection</li>
+                    <li>Check existing policies first</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="total-estimate">
+            <h2>Estimated Total</h2>
+            <p class="total-range">£1,250 - £1,650</p>
+            <p>Per person, excluding food, drinks & ski lessons</p>
+            <p class="breakdown">Accommodation + Flights + Ski Pass + Transfers + Equipment + Insurance</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.cost-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.cost-cards .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.cost-cards .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sky), var(--sky-light));
+}
+
+.cost-cards h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.cost-cards ul {
+    margin-top: var(--space-sm);
+    padding-left: 1.2rem;
+}
+
+.cost-cards li {
+    margin-bottom: 0.25rem;
+    color: var(--glacier);
+}
+
+.total-estimate {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--mist);
+    border-radius: 12px;
+    margin-top: var(--space-lg);
+}
+
+.total-range {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--sky);
+    margin: var(--space-sm) 0;
+}
+
+.breakdown {
+    font-size: 0.875rem;
+    color: var(--glacier);
+    margin-top: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+    .cost-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .total-range {
+        font-size: 2rem;
+    }
+}
+</style>
