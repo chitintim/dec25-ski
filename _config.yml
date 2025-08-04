@@ -3,8 +3,8 @@
 title: La Tania 2025
 description: Annual ski trip to Courchevel - 21st-28th December
 author: Tim
-baseurl: "" # Leave empty unless using project page
-url: "" # Your GitHub Pages URL will go here
+baseurl: "/dec25-ski" # GitHub project page
+url: "https://chitintim.github.io" # Your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
