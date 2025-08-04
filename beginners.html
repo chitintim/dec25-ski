@@ -9,24 +9,91 @@ description: Everything first-time skiers need to know
         <h1>First Time Skiing?</h1>
         <p class="lead">Don't worry - we've got you covered!</p>
         
-        <div class="beginner-guides">
-            <div class="card">
-                <h2>🏿 Gear Guide</h2>
-                <p>What to buy vs rent...</p>
-                <!-- Add gear recommendations -->
+        <div class="coming-soon-notice">
+            <h2>🎿 Detailed beginner guides coming soon...</h2>
+            <p>We're putting together comprehensive guides on gear, lessons, preparation and more.</p>
+            <p>In the meantime, check out our FAQ section which has lots of helpful information for first-timers!</p>
+            
+            <div class="cta-section">
+                <a href="{{ '/faqs#for-first-time-skiers' | relative_url }}" class="btn btn-primary">
+                    View First-Timer FAQs →
+                </a>
             </div>
             
-            <div class="card">
-                <h2>🏫 Ski School</h2>
-                <p>Lesson options and what to expect...</p>
-                <!-- Add ski school info -->
-            </div>
-            
-            <div class="card">
-                <h2>💪 Preparation</h2>
-                <p>Get ski-fit before you go...</p>
-                <!-- Add fitness tips -->
+            <div class="preview-topics">
+                <h3>Coming soon:</h3>
+                <ul>
+                    <li>🛍️ Complete gear guide - what to buy vs rent</li>
+                    <li>👕 Budget clothing recommendations</li>
+                    <li>🏫 Ski school options and tips</li>
+                    <li>💪 Pre-trip fitness preparation</li>
+                    <li>📸 What to expect on your first day</li>
+                    <li>🎯 Beginner-friendly runs in La Tania</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+.coming-soon-notice {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    margin: var(--space-lg) auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.coming-soon-notice h2 {
+    color: var(--sky);
+    margin-bottom: var(--space-md);
+}
+
+.coming-soon-notice p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--glacier);
+    margin-bottom: var(--space-md);
+}
+
+.cta-section {
+    margin: var(--space-lg) 0;
+}
+
+.btn-primary {
+    font-size: 1.1rem;
+    padding: var(--space-md) var(--space-lg);
+}
+
+.preview-topics {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--mist);
+}
+
+.preview-topics h3 {
+    color: var(--midnight);
+    margin-bottom: var(--space-md);
+}
+
+.preview-topics ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.preview-topics li {
+    padding: var(--space-xs) 0;
+    color: var(--glacier);
+}
+
+@media (max-width: 768px) {
+    .coming-soon-notice {
+        padding: var(--space-lg);
+    }
+}
+</style>
