@@ -155,6 +155,103 @@ description: Everything to do beyond the slopes
 
 <section class="section section-alt">
     <div class="container">
+        <h2>🍽️ Restaurant Guide</h2>
+        <p class="lead">Our tried and tested recommendations for groups</p>
+        
+        <div class="restaurant-sections">
+            <div class="restaurant-category">
+                <h3>🏘️ La Tania Village</h3>
+                <div class="restaurant-list">
+                    <div class="restaurant-item">
+                        <h4>La Taïga</h4>
+                        <p class="cuisine">Gastropub with cocktail bar</p>
+                        <p>Best for groups! Upstairs restaurant, downstairs bar with live music. Good mix of traditional and modern dishes.</p>
+                        <p class="price">€€€ • Book for groups</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <h4>La Ferme</h4>
+                        <p class="cuisine">Traditional Savoyard</p>
+                        <p>THE place for fondue and raclette. Cosy mountain atmosphere, perfect for group dinners.</p>
+                        <p class="price">€€ • Book 48hrs ahead</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <h4>The Ski Lodge</h4>
+                        <p class="cuisine">British pub grub</p>
+                        <p>Burgers, fish & chips, curry. Budget-friendly option when you need a break from cheese!</p>
+                        <p class="price">€ • Walk-ins OK</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <h4>Le Farçon</h4>
+                        <p class="cuisine">Michelin-starred</p>
+                        <p>Special occasion spot by chef Julien Machet. Exquisite but pricey.</p>
+                        <p class="price">€€€€ • Book well ahead</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-category">
+                <h3>⛷️ Mountain Lunch Spots</h3>
+                <div class="restaurant-list">
+                    <div class="restaurant-item must-do">
+                        <h4>La Cave des Creux</h4>
+                        <p class="cuisine">Alpine fusion</p>
+                        <p>Former sheepfold at 2,112m with Mont Blanc views. Famous for 5-hour fireplace lamb. Mix of Savoyard and Asian dishes.</p>
+                        <p class="price">€€€€ • €100-150pp • BOOK EARLY!</p>
+                    </div>
+                    <div class="restaurant-item must-do">
+                        <h4>La Soucoupe</h4>
+                        <p class="cuisine">Open-fire cooking</p>
+                        <p>Everything cooked on massive open fire. Huge meat portions perfect for sharing. At top of Loze lift.</p>
+                        <p class="price">€€€ • €44-70pp • Book essential</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <h4>Le Bouc Blanc</h4>
+                        <p class="cuisine">Traditional mountain fare</p>
+                        <p>Great value option on La Tania side. Friendly service, good plat du jour.</p>
+                        <p class="price">€€ • Usually space available</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <h4>Le Bel Air</h4>
+                        <p class="cuisine">Hidden gem</p>
+                        <p>Courchevel 1650 - off the beaten track. Excellent daily specials, sunny terrace.</p>
+                        <p class="price">€€ • Worth the detour</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-category">
+                <h3>🧀 Fondue & Group Dining</h3>
+                <div class="restaurant-list">
+                    <div class="restaurant-item">
+                        <h4>La Fromagerie</h4>
+                        <p class="cuisine">Cheese specialist</p>
+                        <p>THE fondue destination in Courchevel. Multiple cheese options, perfect for groups.</p>
+                        <p class="price">€€ • €24-36 for fondue</p>
+                    </div>
+                    <div class="restaurant-item">
+                        <h4>Le Base Kamp</h4>
+                        <p class="cuisine">Traditional Savoyard</p>
+                        <p>Famous Beaufort cheese tart. All the classics: fondue, tartiflette, raclette.</p>
+                        <p class="price">€€€ • Groups welcome</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="booking-tips">
+            <h3>📅 Booking Tips</h3>
+            <ul>
+                <li><strong>Wednesday = Chalet staff night off</strong> - everywhere is busy, book a week ahead</li>
+                <li><strong>Groups of 10+</strong> need to book most places at least 48hrs in advance</li>
+                <li><strong>Peak times:</strong> 12:30-13:30 for lunch, 19:30 & 21:00 sittings for dinner</li>
+                <li><strong>La Cave des Creux & La Soucoupe</strong> - book as soon as you know your dates!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
         <h2>🌟 Michelin Star Dining</h2>
         <p class="lead">Courchevel has more Michelin stars than any other ski resort</p>
         
@@ -456,5 +553,104 @@ description: Everything to do beyond the slopes
 .reality-check p {
     font-style: italic;
     line-height: 1.6;
+}
+
+.restaurant-sections {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.restaurant-category {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.restaurant-category h3 {
+    color: var(--sky);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--mist);
+}
+
+.restaurant-list {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.restaurant-item {
+    padding: var(--space-md);
+    background: var(--mist);
+    border-radius: 8px;
+    border-left: 4px solid var(--shadow);
+}
+
+.restaurant-item.must-do {
+    border-left-color: var(--alpine-glow);
+    background: rgba(253, 164, 175, 0.05);
+}
+
+.restaurant-item h4 {
+    color: var(--midnight);
+    margin-bottom: var(--space-xs);
+    font-size: 1.2rem;
+}
+
+.cuisine {
+    color: var(--sky);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.restaurant-item p {
+    margin-bottom: var(--space-xs);
+    line-height: 1.5;
+}
+
+.price {
+    color: var(--glacier);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: var(--space-sm);
+}
+
+.booking-tips {
+    background: var(--powder);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    margin-top: var(--space-lg);
+    border: 2px solid var(--sky);
+}
+
+.booking-tips h3 {
+    color: var(--sky);
+    margin-bottom: var(--space-md);
+}
+
+.booking-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.booking-tips li {
+    padding: var(--space-xs) 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.booking-tips li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--sky);
+}
+
+@media (max-width: 768px) {
+    .restaurant-item h4 {
+        font-size: 1.1rem;
+    }
 }
 </style>
