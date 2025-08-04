@@ -68,9 +68,10 @@ description: Build your personalised trip budget with real-time calculations
                     <div class="cost-details">
                         <select id="flight-type" onchange="updateCosts()">
                             <optgroup label="From London">
-                                <option value="235">Budget flight (£235)</option>
-                                <option value="280" selected>BA with luggage (£280)</option>
-                                <option value="320">Flexible ticket (£320)</option>
+                                <option value="150">EasyJet Luton - no luggage (£150)</option>
+                                <option value="243">EasyJet Luton with luggage (£243)</option>
+                                <option value="280" selected>BA Gatwick with luggage (£280)</option>
+                                <option value="320">BA Flexible ticket (£320)</option>
                             </optgroup>
                             <optgroup label="From Asia (Indicative)">
                                 <option value="840">Hong Kong return (£840)</option>
@@ -80,7 +81,7 @@ description: Build your personalised trip budget with real-time calculations
                         </select>
                         <label class="sub-option">
                             <input type="checkbox" id="hold-luggage" checked onchange="updateCosts()">
-                            Hold luggage (+£45 if not BA)
+                            Hold luggage (included in prices above)
                         </label>
                     </div>
                 </div>
@@ -466,11 +467,7 @@ optgroup {
 const costs = {
     accommodation: () => parseInt(document.getElementById('accommodation-occupancy').value),
     flights: () => document.getElementById('flights').checked ? parseInt(document.getElementById('flight-type').value) : 0,
-    holdLuggage: () => {
-        const flightType = document.getElementById('flight-type').value;
-        const needsLuggage = document.getElementById('hold-luggage').checked;
-        return (flightType === '235' && needsLuggage) ? 45 : 0;
-    },
+    holdLuggage: () => 0, // Luggage now included in flight prices
     transfers: () => document.getElementById('transfers').checked ? parseInt(document.getElementById('transfer-type').value) : 0,
     skipass: () => document.getElementById('skipass').checked ? parseInt(document.getElementById('skipass-type').value) : 0,
     skis: () => document.getElementById('skis').checked ? parseInt(document.getElementById('ski-level').value) : 0,
@@ -490,12 +487,13 @@ const costs = {
 const presets = {
     beginner: {
         flights: true,
+        flightType: '243',
         holdLuggage: true,
         transfers: true,
         skipass: true,
-        skipassType: '350',
+        skipassType: '280',  // Courchevel only for beginners
         skis: true,
-        skiLevel: '135',
+        skiLevel: '90',  // Basic skis for beginners
         boots: true,
         helmet: true,
         lessons: true,

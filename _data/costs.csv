@@ -2,9 +2,10 @@ category,item,min_price,max_price,currency,notes,ai_estimated
 Accommodation,Chalet La Koala (10 people),755,755,GBP,Per person for 7 nights,false
 Accommodation,Chalet La Koala (11 people),693,693,GBP,Per person for 7 nights,false
 Accommodation,Chalet La Koala (12 people),630,630,GBP,Per person for 7 nights,false
-Flights,London Gatwick Budget,235,235,GBP,EasyJet/similar - no luggage,false
-Flights,London Gatwick BA,280,280,GBP,Includes hold luggage,false
-Flights,London Gatwick Flexible,320,320,GBP,Flexible ticket with luggage,false
+Flights,EasyJet Luton No Luggage,150,150,GBP,Cabin bag only,false
+Flights,EasyJet Luton With Luggage,243,243,GBP,23kg hold bag included,false
+Flights,BA Gatwick With Luggage,280,280,GBP,Hold luggage + free ski carriage,false
+Flights,BA Gatwick Flexible,320,320,GBP,Flexible ticket with luggage,false
 Flights,Hong Kong Return,840,840,GBP,Indicative price - to be confirmed,true
 Flights,Shanghai Return,560,560,GBP,Indicative price - to be confirmed,true
 Flights,Kuala Lumpur Return,630,630,GBP,Indicative price - to be confirmed,true
