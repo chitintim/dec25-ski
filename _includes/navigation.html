@@ -5,7 +5,8 @@
         <ul class="nav-links">
             <li><a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
             <li><a href="{{ '/trip-details' | relative_url }}" class="nav-link {% if page.url contains 'trip-details' %}active{% endif %}">Trip Details</a></li>
-            <li><a href="{{ '/costs' | relative_url }}" class="nav-link {% if page.url contains 'costs' %}active{% endif %}">Costs</a></li>
+            <li><a href="{{ '/costs' | relative_url }}" class="nav-link {% if page.url == '/costs/' %}active{% endif %}">Costs</a></li>
+            <li><a href="{{ '/costs-interactive' | relative_url }}" class="nav-link {% if page.url contains 'costs-interactive' %}active{% endif %}">Calculator</a></li>
             <li><a href="{{ '/logistics' | relative_url }}" class="nav-link {% if page.url contains 'logistics' %}active{% endif %}">Getting There</a></li>
             <li><a href="{{ '/beginners' | relative_url }}" class="nav-link {% if page.url contains 'beginners' %}active{% endif %}">For Beginners</a></li>
             <li><a href="{{ '/gallery' | relative_url }}" class="nav-link {% if page.url contains 'gallery' %}active{% endif %}">Photos</a></li>
