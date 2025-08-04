@@ -70,7 +70,13 @@ description: Everything you need to know about the chalet and resort
             </div>
             
             <div class="chalet-photos">
-                <h4>Chalet Photos</h4>
+                <h4>Chalet Photos & Details</h4>
+                <div class="booking-status">
+                    <span class="booked-badge">✅ Already Booked for Dec 21-28, 2025</span>
+                    <a href="https://www.airbnb.co.uk/rooms/38691452?guests=1&adults=1&s=67&unique_share_id=3f9c3b26-27e6-4a33-85b0-546ff6dd6853" target="_blank" class="airbnb-link">
+                        View Full Airbnb Listing →
+                    </a>
+                </div>
                 <div class="photo-grid">
                     <img src="{{ '/assets/images/chalet/18e963e8-d34c-4893-83c4-bb60a7f36d0a.jpg.jpg' | relative_url }}" alt="Chalet La Koala" class="chalet-photo">
                     <img src="{{ '/assets/images/chalet/20ea30cc-3f78-4e6b-99bf-dda209494f3f.jpg' | relative_url }}" alt="Chalet La Koala" class="chalet-photo">
@@ -78,7 +84,7 @@ description: Everything you need to know about the chalet and resort
                     <img src="{{ '/assets/images/chalet/7f3af9b2-10af-4b74-812e-a38c90d373d6.jpg.jpg' | relative_url }}" alt="Chalet La Koala" class="chalet-photo">
                     <img src="{{ '/assets/images/chalet/f96cba51-e7b3-4e6b-9ba5-562e9666bdae.jpg.jpg' | relative_url }}" alt="Chalet La Koala" class="chalet-photo">
                 </div>
-                <p class="photo-note">More photos in the <a href="{{ '/gallery' | relative_url }}">gallery</a></p>
+                <p class="photo-note">More photos in the <a href="{{ '/gallery' | relative_url }}">gallery</a> or <a href="https://www.airbnb.co.uk/rooms/38691452?guests=1&adults=1&s=67&unique_share_id=3f9c3b26-27e6-4a33-85b0-546ff6dd6853" target="_blank">full Airbnb listing</a></p>
             </div>
         </div>
     </div>
@@ -420,6 +426,45 @@ description: Everything you need to know about the chalet and resort
     font-size: 0.875rem;
     color: var(--glacier);
     margin-top: var(--space-sm);
+}
+
+.booking-status {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    background: var(--powder);
+    border-radius: 8px;
+    border: 2px solid var(--sky);
+}
+
+.booked-badge {
+    background: #dcfce7;
+    color: #166534;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid #bbf7d0;
+}
+
+.airbnb-link {
+    display: inline-block;
+    background: var(--sky);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.airbnb-link:hover {
+    background: var(--midnight);
+    color: white;
 }
 
 @media (max-width: 768px) {

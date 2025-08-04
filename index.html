@@ -50,7 +50,11 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
             <div class="card fade-in">
                 <h3>🏠 The Chalet</h3>
                 <p>6 bedrooms (up to 12 people), private hot tub & sauna, walking distance to slopes</p>
-                <a href="{{ '/gallery' | relative_url }}" class="small-link">See photos →</a>
+                <div class="chalet-links">
+                    <a href="{{ '/gallery' | relative_url }}" class="small-link">See photos →</a>
+                    <a href="https://www.airbnb.co.uk/rooms/38691452?guests=1&adults=1&s=67&unique_share_id=3f9c3b26-27e6-4a33-85b0-546ff6dd6853" target="_blank" class="small-link airbnb">View Airbnb listing →</a>
+                </div>
+                <p class="booked-notice">✅ Already booked for Dec 21-28, 2025</p>
             </div>
             <div class="card fade-in">
                 <h3>👥 The Dates</h3>
@@ -237,5 +241,33 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
     font-style: italic;
     margin-top: var(--space-xs);
     opacity: 0.7;
+}
+
+.chalet-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+.small-link.airbnb {
+    color: #ff5a5f;
+    font-weight: 600;
+}
+
+.small-link.airbnb:hover {
+    color: #e7484d;
+}
+
+.booked-notice {
+    background: #dcfce7;
+    color: #166534;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: var(--space-sm);
+    border: 1px solid #bbf7d0;
 }
 </style>
