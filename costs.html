@@ -92,6 +92,12 @@ description: Transparent pricing breakdown for the ski trip
             <p class="total-range">£1,250 - £1,650</p>
             <p>Per person, excluding food, drinks & ski lessons</p>
             <p class="breakdown">Accommodation + Flights + Ski Pass + Transfers + Equipment + Insurance</p>
+            
+            <div class="calculator-link">
+                <a href="{{ '/costs-interactive' | relative_url }}" class="btn btn-primary">
+                    🧮 Try the Interactive Cost Calculator
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -181,5 +187,9 @@ description: Transparent pricing breakdown for the ski trip
     .total-range {
         font-size: 2rem;
     }
+}
+
+.calculator-link {
+    margin-top: var(--space-lg);
 }
 </style>

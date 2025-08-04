@@ -6,7 +6,7 @@
                 <ul>
                     <li><a href="{{ '/costs' | relative_url }}">View Costs</a></li>
                     <li><a href="{{ '/faqs' | relative_url }}">FAQs</a></li>
-                    <li><a href="{{ '/contact' | relative_url }}">Contact Tim</a></li>
+                    <li><a href="{{ '/gallery' | relative_url }}">Photos</a></li>
                 </ul>
             </div>
             
@@ -18,8 +18,8 @@
             
             <div class="footer-section">
                 <h4>Stay Updated</h4>
-                <p>Join our WhatsApp group for real-time updates</p>
-                <a href="{{ '/contact' | relative_url }}" class="btn btn-ghost">Get in Touch</a>
+                <p>Join via WhatsApp for real-time updates</p>
+                <p class="footer-note">Ask a mutual friend for Tim's number</p>
             </div>
         </div>
         
@@ -88,5 +88,12 @@
         flex-direction: column;
         text-align: center;
     }
+}
+
+.footer-note {
+    font-size: 0.875rem;
+    color: var(--powder);
+    opacity: 0.8;
+    font-style: italic;
 }
 </style>
