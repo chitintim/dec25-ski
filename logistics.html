@@ -9,149 +9,339 @@ description: Travel logistics and transfer information
         <h1>Getting There</h1>
         <p class="lead">Making your journey to the Alps as smooth as possible</p>
         
-        <div class="logistics-sections">
-            <div class="card">
-                <h2>✈️ Flights</h2>
-                <h3>Recommended Routes</h3>
-                <p><strong>London (Gatwick/Luton) → Geneva</strong> - Direct flights, ~1h 45min</p>
-                
-                <div class="flight-options">
-                    <h4>Best Options (21st Dec)</h4>
-                    <ul>
-                        <li><strong>EasyJet Luton (13:45 → 16:30)</strong> - £243 with 23kg luggage</li>
-                        <li><strong>EasyJet Luton (13:45 → 16:30)</strong> - £150 cabin bag only</li>
-                        <li><strong>BA Gatwick (14:45 → 17:25)</strong> - £280 inc. hold luggage + ski carriage</li>
-                        <li><strong>BA Gatwick (16:15 → 18:55)</strong> - From £280 with luggage</li>
-                    </ul>
-                    
-                    <h4>Return Options (28th Dec)</h4>
-                    <ul>
-                        <li><strong>EasyJet (20:35 → 21:20)</strong> - Included in £243/£150 price</li>
-                        <li><strong>BA (19:45 → 20:30)</strong> - Good for transfers</li>
-                        <li><strong>BA (18:20 → 19:05)</strong> - Earlier option</li>
-                    </ul>
+        <div class="travel-overview">
+            <div class="route-card">
+                <h2>🛫 The Journey</h2>
+                <div class="route-steps">
+                    <div class="step">
+                        <span class="step-icon">✈️</span>
+                        <div class="step-content">
+                            <h3>London → Geneva</h3>
+                            <p>Direct flights, ~1h 45min</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-icon">🚌</span>
+                        <div class="step-content">
+                            <h3>Geneva → La Tania</h3>
+                            <p>Group transfer, ~2.5 hours</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <p class="tip">💡 <strong>Tip:</strong> BA includes free ski carriage with hold luggage!</p>
             </div>
             
-            <div class="card">
+            <div class="booking-card">
+                <h2>💷 Costs & Booking</h2>
+                <p>We coordinate everything as a group for better rates and simpler logistics.</p>
+                <div class="cost-highlight">
+                    <p><strong>Total travel costs typically £320-360 per person</strong></p>
+                    <p class="cost-note">Includes flights + transfers</p>
+                </div>
+                <a href="{{ '/costs' | relative_url }}" class="btn btn-primary">
+                    Use Cost Calculator →
+                </a>
+            </div>
+        </div>
+        
+        <div class="travel-sections">
+            <div class="section-card">
+                <h2>✈️ Flight Options</h2>
+                <div class="airline-options">
+                    <div class="airline">
+                        <h3>EasyJet from Luton</h3>
+                        <p>Most popular option - good times and value</p>
+                        <div class="flight-times">
+                            <span>Out: 13:45 → 16:30</span>
+                            <span>Back: 20:35 → 21:20</span>
+                        </div>
+                    </div>
+                    <div class="airline">
+                        <h3>British Airways from Gatwick</h3>
+                        <p>Includes free ski carriage with hold luggage</p>
+                        <div class="flight-times">
+                            <span>Multiple departure times available</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flight-note">
+                    <p><strong>We coordinate group bookings</strong> once everyone confirms their interest. This ensures we're all on compatible flights for transfers.</p>
+                </div>
+            </div>
+            
+            <div class="section-card">
                 <h2>🚌 Transfers</h2>
-                <h3>Group Transfer Options</h3>
-                <p><strong>To be arranged once we know final numbers</strong></p>
-                <ul>
-                    <li>Geneva Airport → La Tania: ~2.5 hours</li>
-                    <li>Expected cost: <strong>~£80 per person</strong> (based on 8-10 people)</li>
-                    <li>Includes all luggage and ski equipment</li>
-                    <li>Times to be confirmed based on group flights</li>
-                    <li>Tim usually drives down from London so we'll have 1-2 cars for groceries</li>
-                </ul>
-                <p class="note">If we get more than 8 people, cost per person reduces further!</p>
-                
-                <div class="transfer-info">
-                    <h4>Alternative Options</h4>
-                    <ul>
-                        <li><strong>Ben's Bus:</strong> £30-81 per person (shared service)</li>
-                        <li><strong>Join us later:</strong> Arrange your own transfer if flying different times</li>
-                    </ul>
+                <div class="transfer-option main-transfer">
+                    <h3>Group Transfer</h3>
+                    <p>Private minibus arranged based on group flight times. Includes all luggage and ski equipment.</p>
+                    <div class="transfer-benefits">
+                        <span>✓ Door-to-door service</span>
+                        <span>✓ All luggage included</span>
+                        <span>✓ No waiting around</span>
+                    </div>
+                </div>
+                <div class="alternative-note">
+                    <p><strong>Tim drives from London</strong> so we'll have 1-2 cars available for grocery runs and local transport.</p>
                 </div>
             </div>
             
-            <div class="card">
-                <h2>📅 Arrival Day Schedule</h2>
-                <h3>Sunday 21st December</h3>
-                <ul class="timeline">
-                    <li><strong>14:45</strong> - Suggested departure from Gatwick</li>
-                    <li><strong>17:25</strong> - Arrive Geneva (local time)</li>
-                    <li><strong>TBC</strong> - Meet for transfers (based on group flights)</li>
-                    <li><strong>Evening</strong> - Arrive at Chalet La Koala</li>
-                    <li><strong>Late evening</strong> - Welcome drinks! 🥂</li>
-                </ul>
-                <p>Chalet check-in officially from 15:00 (3pm)</p>
+            <div class="section-card">
+                <h2>📅 Travel Day</h2>
+                <div class="schedule-overview">
+                    <h3>Sunday 21st December</h3>
+                    <div class="day-flow">
+                        <div class="time-slot">
+                            <span class="time">Afternoon</span>
+                            <span class="activity">Depart London</span>
+                        </div>
+                        <div class="time-slot">
+                            <span class="time">Evening</span>
+                            <span class="activity">Arrive La Tania</span>
+                        </div>
+                        <div class="time-slot">
+                            <span class="time">Late evening</span>
+                            <span class="activity">Welcome drinks! 🥂</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="checkin-note">Chalet check-in from 15:00 (3pm)</p>
             </div>
+        </div>
+        
+        <div class="logistics-note">
+            <h3>📋 How It Works</h3>
+            <p>Once you confirm your spot, we'll coordinate flight preferences and arrange the group transfer. Everything is organized to minimize cost and maximize convenience for the group.</p>
         </div>
     </div>
 </section>
 
 <style>
-.logistics-sections {
+.travel-overview {
     display: grid;
-    gap: var(--space-sm);
-    margin-top: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
 }
 
-.flight-options {
-    background: var(--mist);
-    padding: var(--space-sm);
-    border-radius: 8px;
-    margin: var(--space-xs) 0;
+.route-card, .booking-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
-.flight-options h4 {
+.route-card h2, .booking-card h2 {
     color: var(--sky);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-md);
 }
 
-.flight-options ul {
-    list-style: none;
-    padding: 0;
+.route-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
 }
 
-.flight-options li {
-    padding: var(--space-xs) 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+.step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
 }
 
-.flight-options li:last-child {
-    border-bottom: none;
-}
-
-.tip {
+.step-icon {
+    font-size: 2rem;
     background: var(--powder);
     padding: var(--space-sm);
-    border-radius: 6px;
-    margin-top: var(--space-sm);
+    border-radius: 50%;
+    min-width: 60px;
+    text-align: center;
 }
 
-.timeline {
-    list-style: none;
-    padding: 0;
-}
-
-.timeline li {
-    padding: var(--space-xs) 0;
-    padding-left: var(--space-md);
-    position: relative;
-}
-
-.timeline li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--sky);
-    font-size: 1.5rem;
-}
-
-.card h3 {
+.step-content h3 {
     color: var(--midnight);
-    margin-top: var(--space-sm);
     margin-bottom: var(--space-xs);
 }
 
-.card h4 {
-    font-size: 1rem;
-    margin-bottom: var(--space-xs);
-}
-
-.transfer-info {
-    background: var(--mist);
-    padding: var(--space-sm);
+.cost-highlight {
+    background: var(--powder);
+    padding: var(--space-md);
     border-radius: 8px;
+    text-align: center;
+    margin: var(--space-md) 0;
+}
+
+.cost-highlight strong {
+    color: var(--sky);
+    font-size: 1.1rem;
+}
+
+.cost-note {
+    font-size: 0.9rem;
+    color: var(--glacier);
+    margin-top: var(--space-xs);
+}
+
+.booking-card .btn {
+    width: 100%;
+    justify-content: center;
     margin-top: var(--space-sm);
 }
 
-.transfer-info h4 {
-    color: var(--glacier);
+.travel-sections {
+    display: grid;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.section-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section-card h2 {
+    color: var(--sky);
+    margin-bottom: var(--space-md);
+}
+
+.airline-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.airline {
+    background: var(--mist);
+    padding: var(--space-md);
+    border-radius: 8px;
+}
+
+.airline h3 {
+    color: var(--midnight);
+    margin-bottom: var(--space-xs);
+}
+
+.flight-times {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
     font-size: 0.9rem;
+    color: var(--glacier);
+    margin-top: var(--space-sm);
+}
+
+.flight-note {
+    background: var(--powder);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sky);
+}
+
+.main-transfer {
+    background: var(--mist);
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
+}
+
+.main-transfer h3 {
+    color: var(--midnight);
+    margin-bottom: var(--space-sm);
+}
+
+.transfer-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+.transfer-benefits span {
+    background: white;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--glacier);
+}
+
+.alternative-note {
+    background: var(--powder);
+    padding: var(--space-md);
+    border-radius: 8px;
+}
+
+.schedule-overview h3 {
+    color: var(--midnight);
+    margin-bottom: var(--space-md);
+}
+
+.day-flow {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.time-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm);
+    background: var(--mist);
+    border-radius: 6px;
+}
+
+.time {
+    font-weight: 600;
+    color: var(--sky);
+}
+
+.activity {
+    color: var(--glacier);
+}
+
+.checkin-note {
+    font-size: 0.9rem;
+    color: var(--glacier);
+    text-align: center;
+    margin-top: var(--space-md);
+    font-style: italic;
+}
+
+.logistics-note {
+    background: var(--powder);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    text-align: center;
+    margin-top: var(--space-xl);
+    border: 2px solid var(--sky);
+}
+
+.logistics-note h3 {
+    color: var(--sky);
+    margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .travel-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .route-steps {
+        gap: var(--space-sm);
+    }
+    
+    .step-icon {
+        min-width: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .airline-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .time-slot {
+        flex-direction: column;
+        gap: var(--space-xs);
+        text-align: center;
+    }
 }
 </style>
