@@ -50,6 +50,7 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
             <div class="card fade-in">
                 <h3>🏠 The Chalet</h3>
                 <p>6 bedrooms (up to 12 people), private hot tub & sauna, walking distance to slopes</p>
+                <a href="{{ '/gallery' | relative_url }}" class="small-link">See photos →</a>
             </div>
             <div class="card fade-in">
                 <h3>👥 The Dates</h3>
@@ -208,5 +209,17 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
         margin-bottom: var(--space-sm);
         font-size: 0.95rem;
     }
+}
+
+.small-link {
+    font-size: 0.875rem;
+    color: var(--sky);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: var(--space-xs);
+}
+
+.small-link:hover {
+    text-decoration: underline;
 }
 </style>
