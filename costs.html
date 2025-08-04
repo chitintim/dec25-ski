@@ -88,6 +88,9 @@ description: Build your personalised trip budget with real-time calculations
                             <input type="checkbox" id="hold-luggage" checked onchange="updateCosts()">
                             Hold luggage (included in prices above)
                         </label>
+                        <div class="flight-warning">
+                            <p><strong>⚠️ Don't search these flights yourself!</strong> Airlines track searches and increase prices. Let Tim handle flight research to avoid price hikes.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -550,6 +553,20 @@ description: Build your personalised trip budget with real-time calculations
 optgroup {
     font-weight: bold;
     color: var(--sky);
+}
+
+.flight-warning {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: var(--space-sm);
+    border-radius: 4px;
+    margin-top: var(--space-sm);
+}
+
+.flight-warning p {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin: 0;
 }
 </style>
 

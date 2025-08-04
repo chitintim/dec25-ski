@@ -66,6 +66,9 @@ description: Travel logistics and transfer information
                 <div class="flight-note">
                     <p><strong>We coordinate group bookings</strong> once everyone confirms their interest. This ensures we're all on compatible flights for transfers.</p>
                 </div>
+                <div class="price-warning">
+                    <p><strong>⚠️ Don't search flights individually!</strong> Airline websites track searches and can increase prices. Let Tim handle the flight research and booking to avoid price hikes.</p>
+                </div>
             </div>
             
             <div class="section-card">
@@ -318,6 +321,19 @@ description: Travel logistics and transfer information
 .logistics-note h3 {
     color: var(--sky);
     margin-bottom: var(--space-md);
+}
+
+.price-warning {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin-top: var(--space-sm);
+}
+
+.price-warning p {
+    color: #dc2626;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
