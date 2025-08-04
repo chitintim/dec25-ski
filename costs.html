@@ -9,6 +9,10 @@ description: Build your personalised trip budget with real-time calculations
         <h1>Trip Costs & Calculator</h1>
         <p class="lead">Build your personalised budget • All prices are estimates to be confirmed</p>
         
+        <div class="preset-callout">
+            <p>👇 <strong>Start here!</strong> Choose a preset that matches your experience level:</p>
+        </div>
+        
         <div class="important-note">
             <h3>⚠️ Important Booking Information</h3>
             <ul>
@@ -270,11 +274,28 @@ description: Build your personalised trip budget with real-time calculations
 </section>
 
 <style>
+.preset-callout {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--sky);
+    margin-bottom: var(--space-md);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
 .preset-buttons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--space-sm);
     margin-bottom: var(--space-lg);
+    padding: var(--space-md);
+    background: var(--powder);
+    border-radius: 12px;
+    border: 2px solid var(--sky);
 }
 
 .preset-btn {
@@ -285,11 +306,19 @@ description: Build your personalised trip budget with real-time calculations
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(3, 105, 161, 0.1);
+    font-size: 1.05rem;
 }
 
 .preset-btn:hover {
-    background: var(--powder);
+    background: var(--sky);
+    color: white;
     transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(3, 105, 161, 0.2);
+}
+
+.preset-btn:hover .preset-desc {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .preset-desc {
