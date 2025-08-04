@@ -189,16 +189,24 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
 
 .intro-message {
     background: var(--powder);
-    padding: var(--space-lg);
-    border-radius: 12px;
-    margin-bottom: var(--space-xl);
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
     border-left: 4px solid var(--sky);
 }
 
 .intro-message p {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--midnight);
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .intro-message {
+        padding: var(--space-sm);
+        margin-bottom: var(--space-sm);
+        font-size: 0.95rem;
+    }
 }
 </style>

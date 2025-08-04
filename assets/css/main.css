@@ -25,12 +25,12 @@
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', Consolas, monospace;
   
-  /* Spacing */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 3rem;
-  --space-xl: 4rem;
+  /* Spacing - Reduced for denser layout */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
   
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -52,16 +52,16 @@ body {
   overflow-x: hidden;
 }
 
-/* Typography */
+/* Typography - Tighter for mobile */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--space-sm);
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h3 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
 
 p {
   color: var(--glacier);
@@ -79,16 +79,16 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Container */
+/* Container - Wider for better use of space */
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-sm);
 }
 
-/* Hero Section */
+/* Hero Section - Reduced height for more content above fold */
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,6 +96,7 @@ a:hover {
   text-align: center;
   position: relative;
   background: linear-gradient(180deg, var(--snow) 0%, var(--powder) 100%);
+  padding: var(--space-lg) 0;
 }
 
 .hero-title {
@@ -157,18 +158,18 @@ a:hover {
   text-decoration: none;
 }
 
-/* Cards */
+/* Cards - Tighter padding */
 .card {
   background: white;
-  border-radius: 12px;
-  padding: var(--space-md);
+  border-radius: 8px;
+  padding: var(--space-sm) var(--space-md);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Mountain Background */
@@ -251,13 +252,14 @@ a:hover {
   font-size: 2rem;
 }
 
-/* Section Spacing */
+/* Section Spacing - Much tighter */
 .section {
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0;
 }
 
 .section-alt {
   background: var(--mist);
+  padding: var(--space-lg) 0;
 }
 
 /* Countdown Timer */
@@ -300,7 +302,7 @@ a:hover {
   font-weight: 600;
 }
 
-/* Mobile Menu */
+/* Mobile Optimizations */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -314,17 +316,38 @@ a:hover {
     cursor: pointer;
   }
   
-  .container {
-    padding: 0 var(--space-sm);
-  }
-  
-  .hero-title {
-    font-size: 2rem;
+  .hero {
+    min-height: 50vh;
+    padding: var(--space-md) 0;
   }
   
   .countdown {
-    flex-direction: column;
-    gap: var(--space-xs);
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+  
+  .countdown-item {
+    padding: 0 var(--space-xs);
+  }
+  
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: var(--space-md) 0;
+  }
+  
+  .card {
+    padding: var(--space-sm);
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+  
+  .mountain-bg {
+    height: 100px;
   }
 }
 
