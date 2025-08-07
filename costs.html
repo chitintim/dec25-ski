@@ -116,10 +116,12 @@ description: Build your personalised trip budget with real-time calculations
                     </label>
                     <div class="cost-details">
                         <select id="skipass-type" onchange="updateCosts()">
-                            <option value="350">3 Valleys (€400 ≈ £350)</option>
-                            <option value="280">Courchevel only (€320 ≈ £280)</option>
-                            <option value="150">Beginner area (€170 ≈ £150)</option>
+                            <option value="360">3 Valleys (€409 ≈ £360)</option>
+                            <option value="225">Courchevel only (€256 ≈ £225)</option>
+                            <option value="0">Beginner (Free nursery slopes)</option>
+                            <option value="80">Mini Pass - few lifts (€90 ≈ £80)</option>
                         </select>
+                        <div class="sub-note">6 days for price of 5 - special offer!</div>
                     </div>
                 </div>
             </div>
@@ -599,7 +601,7 @@ const presets = {
         holdLuggage: true,
         transfers: true,
         skipass: true,
-        skipassType: '280',  // Courchevel only for beginners
+        skipassType: '80',  // Mini pass for beginners
         skis: true,
         skiLevel: '90',  // Basic skis for beginners
         boots: true,
@@ -617,7 +619,7 @@ const presets = {
         holdLuggage: true,
         transfers: true,
         skipass: true,
-        skipassType: '350',
+        skipassType: '360',
         skis: true,
         skiLevel: '180',
         boots: false,
@@ -635,7 +637,7 @@ const presets = {
         holdLuggage: true,
         transfers: true,
         skipass: true,
-        skipassType: '350',
+        skipassType: '360',
         skis: false,
         boots: false,
         helmet: false,
@@ -654,7 +656,7 @@ const presets = {
         holdLuggage: false,
         transfers: true,
         skipass: true,
-        skipassType: '280',
+        skipassType: '225',
         skis: true,
         skiLevel: '90',
         boots: true,
