@@ -20,7 +20,7 @@ description: Build your personalised trip budget with real-time calculations
                 <li><strong>Chalet is booked Saturday to Saturday</strong> (20th-27th Dec) - full week only</li>
                 <li><strong>Accommodation must be paid for the full week</strong> even if staying fewer nights</li>
                 <li><strong>Partial stays welcome</strong> but you'd need separate transfers if not joining the group</li>
-                <li><strong>Group discount</strong> - the more people, the lower the per-person accommodation cost</li>
+                <li><strong>Group discount</strong> - the more people (max 8), the lower the per-person accommodation cost</li>
             </ul>
         </div>
         
@@ -58,7 +58,6 @@ description: Build your personalised trip budget with real-time calculations
                     </label>
                     <div class="cost-details">
                         <select id="accommodation-occupancy" onchange="updateCosts()">
-                            <option value="862">Based on 5 people (£862)</option>
                             <option value="718">Based on 6 people (£718)</option>
                             <option value="616">Based on 7 people (£616)</option>
                             <option value="539" selected>Based on 8 people (£539)</option>
@@ -194,19 +193,18 @@ description: Build your personalised trip budget with real-time calculations
                 <div class="cost-item">
                     <label>
                         <input type="checkbox" id="food" checked onchange="updateCosts()">
-                        <span>🍽️ Food Budget</span>
+                        <span>🍽️ Meals Out Budget</span>
                     </label>
                     <div class="cost-details">
                         <div class="food-breakdown">
                             <div>Lunches on mountain: €15-25 x 6 = €90-150</div>
-                            <div>Dinners out: €25-40 x 3 = €75-120</div>
-                            <div>Group cooking/drinks: ~€50</div>
-                            <div class="total-estimate">Total: €215-320 (£190-280)</div>
+                            <div>Dinners out: €25-40 x 3-4 = €75-160</div>
+                            <div class="total-estimate">Total: €165-310 (£145-270)</div>
                         </div>
                         <select id="food-budget" onchange="updateCosts()">
-                            <option value="190">Budget eating (£190)</option>
-                            <option value="235" selected>Normal eating (£235)</option>
-                            <option value="280">Foodie experience (£280)</option>
+                            <option value="145">Budget eating (£145)</option>
+                            <option value="200" selected>Normal eating (£200)</option>
+                            <option value="270">Foodie experience (£270)</option>
                         </select>
                     </div>
                 </div>
@@ -229,15 +227,15 @@ description: Build your personalised trip budget with real-time calculations
                 <div class="cost-item">
                     <label>
                         <input type="checkbox" id="groceries" checked onchange="updateCosts()">
-                        <span>🛒 Grocery Shopping</span>
+                        <span>🛒 Groceries & Group Cooking</span>
                     </label>
                     <div class="cost-details">
                         <select id="grocery-budget" onchange="updateCosts()">
-                            <option value="50">Basic groceries (£50)</option>
-                            <option value="80" selected>Normal groceries (£80)</option>
-                            <option value="120">Premium groceries (£120)</option>
+                            <option value="60">Basic groceries (£60)</option>
+                            <option value="90" selected>Normal groceries (£90)</option>
+                            <option value="130">Premium groceries (£130)</option>
                         </select>
-                        <div class="sub-note">For breakfasts & snacks (or all meals if no chef)</div>
+                        <div class="sub-note">For breakfasts, 2-3 group dinners, snacks & drinks</div>
                     </div>
                 </div>
             </div>
@@ -609,9 +607,9 @@ const presets = {
         lessons: true,
         lessonType: '117',  // Shared private lessons
         food: true,
-        foodBudget: '235',
+        foodBudget: '200',
         groceries: true,
-        groceryBudget: '80',
+        groceryBudget: '90',
         insurance: true
     },
     intermediate: {
@@ -627,9 +625,9 @@ const presets = {
         lessons: false,
         lessonType: '0',
         food: true,
-        foodBudget: '235',
+        foodBudget: '200',
         groceries: true,
-        groceryBudget: '80',
+        groceryBudget: '90',
         insurance: true
     },
     pro: {
@@ -644,9 +642,9 @@ const presets = {
         lessons: false,
         lessonType: '0',
         food: true,
-        foodBudget: '280',
+        foodBudget: '270',
         groceries: true,
-        groceryBudget: '120',
+        groceryBudget: '130',
         insurance: true,
         extras: true
     },
@@ -664,9 +662,9 @@ const presets = {
         lessons: false,
         lessonType: '0',
         food: true,
-        foodBudget: '190',
+        foodBudget: '145',
         groceries: true,
-        groceryBudget: '50',
+        groceryBudget: '60',
         insurance: true
     }
 };
