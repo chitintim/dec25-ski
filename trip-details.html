@@ -16,7 +16,11 @@ description: Everything you need to know about the chalet and resort
         <h2>The Chalet</h2>
         <div class="content-block">
             <h3>🏔️ Chalet Octobre</h3>
-            <p class="lead">A spacious chalet with fireplace in the heart of La Tania</p>
+            <p class="lead">A spacious ski-in/ski-out chalet with fireplace in the heart of La Tania</p>
+            <div class="highlight-box">
+                <strong>🎿 SKI-IN/SKI-OUT ACCESS</strong>
+                <p>Perfect for beginners after 2-3 days! The chalet offers true ski-in/ski-out access via a gentle blue run that connects directly to the property. While the initial access is via a red piste (3 minute walk), by day 2 or 3, most beginners can comfortably ski right back to the chalet door.</p>
+            </div>
             
             <div class="chalet-features">
                 <div class="feature-card">
@@ -24,11 +28,12 @@ description: Everything you need to know about the chalet and resort
                     <ul>
                         <li>Three inverted levels design</li>
                         <li>4 bedrooms (sleeps up to 8)</li>
-                        <li>4 en-suite bathrooms plus separate WC</li>
+                        <li><strong>4 en-suite bathrooms</strong> plus separate WC</li>
                         <li>Large living room with fireplace</li>
                         <li>Open kitchen and dining area</li>
                         <li>South-facing terrace with views</li>
                         <li>2 covered parking spaces</li>
+                        <li><strong>Ski-in/ski-out access</strong> (beginner-friendly after 2-3 days)</li>
                     </ul>
                 </div>
                 
@@ -113,11 +118,12 @@ description: Everything you need to know about the chalet and resort
                 <div class="info-block">
                     <h4>Location Benefits</h4>
                     <ul>
-                        <li>3 minute walk to red piste (suitable for intermediates/advanced)</li>
-                        <li>15 minute walk to town centre for beginners' areas</li>
-                        <li>Resort centre walkable (shops, ski school)</li>
+                        <li><strong>Ski-in/ski-out via blue run</strong> - perfect for beginners after day 2-3</li>
+                        <li>3 minute walk to red piste access point</li>
+                        <li>15 minute walk to town centre for beginners' ski school</li>
+                        <li>Resort centre walkable (shops, restaurants)</li>
                         <li>No car needed during the stay</li>
-                        <li>Links to Courchevel, Méribel & Val Thorens</li>
+                        <li>Direct links to Courchevel, Méribel & Val Thorens</li>
                     </ul>
                 </div>
             </div>
@@ -361,6 +367,28 @@ description: Everything you need to know about the chalet and resort
     color: var(--sky);
     font-weight: 600;
     margin-top: var(--space-sm);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #e0f2fe 0%, #e0e7ff 100%);
+    border: 2px solid var(--sky);
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.highlight-box strong {
+    color: var(--midnight);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.highlight-box p {
+    color: var(--glacier);
+    line-height: 1.6;
+    margin: 0;
 }
 
 @media (max-width: 768px) {

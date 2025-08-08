@@ -27,6 +27,24 @@ description: Everything to do beyond the slopes
     <div class="container">
         <div class="activities-container">
             
+            <!-- CHALET ACCESS INFO -->
+            <div class="activity-section">
+                <h2>🏠 Getting Back to Chalet Octobre</h2>
+                <p class="section-lead">Ski-in/ski-out made easy!</p>
+                
+                <div class="chalet-access-info">
+                    <div class="access-highlight">
+                        <h3>🎿 True Ski-In/Ski-Out Access</h3>
+                        <p><strong>Perfect for beginners after 2-3 days!</strong> The chalet has direct ski-in/ski-out access via a gentle blue run that leads right to the property. While the initial access point is a 3-minute walk to a red piste, by day 2 or 3, most beginners can comfortably ski the blue run back to the chalet door.</p>
+                        <ul>
+                            <li>Day 1: Walk back or take the gondola down</li>
+                            <li>Day 2-3: Most beginners can manage the blue run</li>
+                            <li>Day 4+: Ski right to the door with confidence!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
             <!-- MUST-DO EXPERIENCES -->
             <div id="must-do" class="activity-section">
                 <h2>🎯 Must-Do Experiences</h2>
@@ -649,6 +667,44 @@ description: Everything to do beyond the slopes
     background: white;
     border-radius: 6px;
     font-size: 0.9rem;
+}
+
+.chalet-access-info {
+    background: linear-gradient(135deg, #e0f2fe 0%, #e0e7ff 100%);
+    border: 2px solid var(--sky);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    margin: var(--space-md) 0;
+}
+
+.access-highlight h3 {
+    color: var(--midnight);
+    margin-bottom: var(--space-md);
+}
+
+.access-highlight p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.access-highlight ul {
+    list-style: none;
+    padding: 0;
+}
+
+.access-highlight li {
+    padding: var(--space-xs) 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.access-highlight li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--sky);
+    font-weight: bold;
 }
 
 /* Remove default details marker */

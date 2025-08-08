@@ -41,15 +41,22 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
             <p>Hey guys! As promised, it's that time of year again (rather early this year!) to plan Tim's ski trip(s). As usual, we're planning to go to Courchevel for the December trip, and I've actually already secured a chalet this year! Using this site to help organise everything and keep you all updated.</p>
         </div>
         
-        <h2 class="text-center">What I've Booked</h2>
+        <h2 class="text-center">What I've Booked - Premium Ski-In/Ski-Out Chalet!</h2>
         <div class="features-grid">
             <div class="card fade-in">
                 <h3>🏔️ The Location</h3>
                 <p>Chalet Octobre in La Tania - same resort as always, gateway to the 3 Valleys with 600km of skiing</p>
+                <p class="ski-access-badge">🎿 <strong>SKI-IN/SKI-OUT ACCESS</strong> - Perfect for beginners after 2-3 days!</p>
             </div>
             <div class="card fade-in">
                 <h3>🏠 The Chalet</h3>
-                <p>4 bedrooms (8 guests), 4 bathrooms, fireplace, ski room with boot dryers, 3 min walk to red piste</p>
+                <p><strong>4 bedrooms with 4 en-suite bathrooms</strong> (8 guests total)</p>
+                <ul class="chalet-highlights">
+                    <li>🎿 True ski-in/ski-out via blue run</li>
+                    <li>🚪 4 en-suite bathrooms (luxury!)</li>
+                    <li>🔥 Cozy fireplace & ski room with boot dryers</li>
+                    <li>😶 Perfect for beginners & mixed abilities</li>
+                </ul>
                 <div class="chalet-links">
                     <a href="{{ '/gallery' | relative_url }}" class="small-link">See photos →</a>
                     <a href="https://www.airbnb.co.uk/rooms/4726212?guests=1&adults=8&s=67&unique_share_id=6cea7fce-9cc8-47ab-9c36-2d0ab538f71d" target="_blank" class="small-link airbnb">View Airbnb listing →</a>
@@ -269,5 +276,28 @@ description: Join us for an unforgettable ski trip to La Tania, Courchevel
     text-align: center;
     margin-top: var(--space-sm);
     border: 1px solid #bbf7d0;
+}
+
+.ski-access-badge {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    color: white;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: var(--space-sm);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.chalet-highlights {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-sm) 0;
+    font-size: 0.95rem;
+}
+
+.chalet-highlights li {
+    padding: var(--space-xs) 0;
+    color: var(--glacier);
 }
 </style>
